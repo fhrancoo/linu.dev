@@ -1,11 +1,9 @@
 ---
 import Menu from './Menu.astro'
 ---
-
-<style></style>
-<header class='flex py-10'>
+<header class='flex py-10 w-full'>
 	<div class='flex items-center justify-between w-full px-8'>
-		<a href='' class='text-2xl font-extralight font-mona-sans uppercase'>Linux Mobile</a>
+		<a href='' class='text-2xl font-extralight font-mona-sans uppercase z-[2]' id="logo">Linux Mobile</a>
 		<div class='flex items-center justify-center gap-x-4'>
 			<button
 				type='button'
@@ -13,7 +11,7 @@ import Menu from './Menu.astro'
 				class='text-md font-light font-mona-sans bg-slate-700/50 text-white/90 px-3 py-2 rounded-3xl'
 				>Theme Mode</button
 			>
-			<div class='flex items-center justify-center' id='menutoggle'>
+			<div class='flex items-center justify-center z-[2]' id='menutoggle'>
 				<div
 					class='group flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-white p-2 hover:bg-slate-200'>
 					<div class='space-y-2'>
