@@ -5,8 +5,24 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				'mona-sans': ['Mona Sans'],
-				'hubot-sans': ['Hubot Sans']
-			}
+				'hubot-sans': ['Hubot Sans'],
+				'porlane': ['Porlane'],
+				'porlane-slate': ['Porlane Slanted']
+			},
+			animation: {
+				marquee: 'marquee 25s linear infinite',
+				marquee2: 'marquee2 25s linear infinite',
+			  },
+			  keyframes: {
+				marquee: {
+				  '0%': { transform: 'translateX(0%)' },
+				  '100%': { transform: 'translateX(-100%)' },
+				},
+				marquee2: {
+				  '0%': { transform: 'translateX(100%)' },
+				  '100%': { transform: 'translateX(0%)' },
+				},
+			  },
 		}
 	},
 	plugins: [

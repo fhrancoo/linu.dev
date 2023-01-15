@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Mona Sans';
+	src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+		url('Mona-Sans.woff2') format('woff2-variations');
+	font-weight: 200 900;
+	font-stretch: 75% 125%;
+}
+@font-face {
+	font-family: 'Hubot Sans';
+	src: url('Hubot-Sans.woff2') format('woff2 supports variations'),
+		url('Hubot-Sans.woff2') format('woff2-variations');
+	font-weight: 200 900;
+	font-stretch: 75% 125%;
+}
+@font-face {
+	font-family: 'Porlane';
+	src: url(Porlane.otf) format('opentype');
+	font-weight: 200 900;
+	font-stretch: 75% 125%;
+}
+@font-face {
+	font-family: 'Porlane';
+	src: url(Porlane.otf) format('opentype');
+	font-weight: 200 900;
+	font-stretch: 75% 125%;
+}
+
+@layer base {
+	html {
+		font-family: 'Mona Sans';
+	}
+}
+
+/* Replace selection color 🕶️ */
+::-moz-selection {
+	/* Code for Firefox */
+	background: var(--soft-coffee);
+}
+::selection {
+	background: var(--soft-coffee);
+}
+/* Scrollbar design */
+::-webkit-scrollbar {
+	height: 8px;
+	width: 8px;
+}
+::-webkit-scrollbar-corner {
+	background: #a8b3cf;
+}
+::-webkit-scrollbar-thumb {
+	background: #a8b3cf;
+	border-radius: 6px;
+}
+
+*,
+:after,
+:before {
+	box-sizing: border-box;
+	border: 0 solid;
+}
