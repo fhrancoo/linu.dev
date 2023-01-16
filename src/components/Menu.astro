@@ -1,5 +1,34 @@
 ---
-
+const year = new Date().getFullYear()
 ---
-<section class="bg-slate-500 w-full h-full absolute top-0 z-[1] hidden" id="menuSection">
+
+<section class='bg-white w-full h-full fixed top-0 z-[1] hidden flex-col' id='menuSection'>
+	<div
+		class='flex items-center justify-center w-full h-[90%] shadow-2xl shadow-slate-900/30 fixed z-[2] bg-white'>
+		<article class='text-black flex items-start justify-center px-12 pb-6 mt-20 bg-slate-200 mx-6 rounded-xl w-full'>
+			<ul class='flex flex-col items-start justify-center text-7xl gap-6 uppercase font-mona-sans font-bold w-full pt-8'>
+				<li class=''>Inicio</li>
+				<li class=''>Proyectos</li>
+				<li class=''>Blog</li>
+				<li class=''>Contacto</li>
+			</ul>
+		</article>
+	</div>
+	<div class='text-black flex justify-start h-[10%] w-full z-[1] absolute bottom-0 px-12'>
+		<footer class='flex items-center justify-between w-full'>
+			<div class=''>
+				<h2 class='text-[13rem] font-mona-sans'>© {year}</h2>
+			</div>
+			<div class='flex items-start justify-end gap-16 uppercase font-mona-sans text-xs'>
+				<ul class='flex items-start justify-center flex-col gap-2'>
+					<li class=''>Linkedin</li>
+					<li class=''>Disponible Para contratar</li>
+				</ul>
+				<ul class='flex items-start justify-center flex-col gap-2'>
+					<li class=''>Copyrights</li>
+					<li class=''>FAQs</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
 </section>
