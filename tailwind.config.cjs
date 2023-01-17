@@ -5,7 +5,8 @@ module.exports = {
 			fontFamily: {
 				'mona-sans': ['Mona Sans'],
 				'hubot-sans': ['Hubot Sans'],
-				porlane: ['Porlane']
+				porlane: ['Porlane'],
+				'antique-olive': ['antique-olive']
 			},
 			animation: {
 				marquee: 'marquee 25s linear infinite',
