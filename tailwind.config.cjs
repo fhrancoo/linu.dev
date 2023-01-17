@@ -6,7 +6,7 @@ module.exports = {
 				'mona-sans': ['Mona Sans'],
 				'hubot-sans': ['Hubot Sans'],
 				porlane: ['Porlane'],
-				'antique-olive': ['antique-olive']
+				'antique-olive': ['Antique Olive']
 			},
 			animation: {
 				marquee: 'marquee 25s linear infinite',
