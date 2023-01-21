@@ -24,5 +24,22 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [require('@tailwindcss/line-clamp')]
+	daisyui: {
+		themes: [
+			{
+				dark: {
+					primary: '#5F6786',
+					secondary: '#9799B6',
+					accent: '#CFCBE6',
+					neutral: '#272D3F',
+					'base-100': '#21232D',
+					info: '#D8B4FE',
+					success: '#86EFAC',
+					warning: '#FDE68A',
+					error: '#FCA5A5'
+				}
+			}
+		]
+	},
+	plugins: [require('@tailwindcss/line-clamp'), require('daisyui')]
 }
