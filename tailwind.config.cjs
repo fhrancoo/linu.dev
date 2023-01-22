@@ -40,10 +40,10 @@ module.exports = {
 					'base-content': '#CFCBE6'
 				},
 				light: {
-					primary: '#353C51',
-					secondary: '#434A63',
-					accent: '#606887',
-					neutral: '#272D3F',
+					primary: '#5F6786',
+					secondary: '#353C51',
+					accent: '#272D3F',
+					neutral: '#CFCBE6',
 					'base-100': '#E1DFF0',
 					info: '#93c5fd',
 					success: '#4ade80',
@@ -54,5 +54,8 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [require('@tailwindcss/line-clamp'), require('daisyui')]
+	plugins: [require('@tailwindcss/line-clamp'), require('daisyui'), require('tailwind-scrollbar')],
+	variants: {
+        scrollbar: ['rounded']
+    }
 }
