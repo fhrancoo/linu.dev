@@ -34,20 +34,6 @@ const { title = 'LNXMBL', description = 'Bienvenido a casa <3', image = '' } = A
 	<meta name='twitter:description' content={description} />
 	<meta name='twitter:image' content={image} />
 
-	<script is:inline>
-		// ☝️ This script prevent the FART effect.
-		if (localStorage.getItem('theme') === null) {
-			document.documentElement.setAttribute('data-theme', 'dark')
-		} else document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
-		// "theme" LocalStorage value is set by the package to remember user preference.
-		// The value is checked and applyed before rendering anything.
-	</script>
-	<script>
-		import { themeChange } from 'theme-change'
-		themeChange()
-		// 👆 you could import the CDN directly instead of these two lines
-	</script>
-
 	<link rel='preload' href='/Mona-Sans.woff2' as='font' type='font/woff2' crossorigin />
 	<link rel='preload' href='/Hubot-Sans.woff2' as='font' type='font/woff2' crossorigin />
 	<link rel='preload' href='/main.css' as='style' onload="this.onload=null;this.rel='stylesheet'" />
