@@ -71,19 +71,6 @@
 ::selection {
 	background: var(--soft-coffee);
 }
-/* Scrollbar design */
-::-webkit-scrollbar {
-	height: 8px;
-	width: 8px;
-}
-::-webkit-scrollbar-corner {
-	background: #a8b3cf;
-}
-::-webkit-scrollbar-thumb {
-	background: #a8b3cf;
-	border-radius: 6px;
-}
-
 *,
 :after,
 :before {
