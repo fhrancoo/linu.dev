@@ -1,6 +1,48 @@
 ---
-
+const projects = [
+	{
+		title: 'LiNews',
+		description:
+			'Un sitio de Noticias utilizando la API de dev.to. Realizado como integrador de Javascript en NUCBA.',
+		image: ''
+	},
+	{
+		title: 'Pokelinux',
+		description:
+			'Uno de los trabajos realizados para NUCBA, para incorporar lo aprendido utilizando APIS.',
+		image: ''
+	},
+	{
+		title: 'LinuDev',
+		description: 'Mi portfolio personal, realizado con Astro, Tailwind y más.',
+		image: ''
+	}
+]
 ---
-<section class="">
-    
+
+<section class='w-full h-full flex flex-col items-center justify-center my-24 px-12'>
+	<h2 class='text-9xl font-mona-sans [font-stretch:ultra-expanded] font-bold w-full'>Projects</h2>
+    <div class="divider"></div>
+	<main class='w-full my-36 flex-col items-center justify-center flex gap-48'>
+		<article class='flex items-end justify-between w-full gap-x-6'>
+			<h3 class='font-mona-sans [font-stretch:ultra-expanded] font-medium text-6xl'>LiNews</h3>
+			<div class='w-full border-b-[1px] border-b-accent'></div>
+			<img src='https://i.imgur.com/nzSUiVM.png' alt='Captura de pantalla del proyecto LiNews' class='aspect-video max-w-md rounded-3xl grayscale hover:grayscale-0' />
+			<div class='w-full border-b-[1px] border-b-accent'></div>
+		</article>
+		<article class='flex items-end justify-between w-full gap-x-6'>
+			<div class='w-full border-b-[1px] border-b-accent'></div>
+			<img src='https://i.imgur.com/LAQlae3.png' alt='Captura de pantalla del proyecto LiNews' class='aspect-video max-w-md rounded-3xl object-cover grayscale hover:grayscale-0' />
+			<div class='w-full border-b-[1px] border-b-accent'></div>
+			<h3 class='font-mona-sans [font-stretch:ultra-expanded] font-medium text-6xl'>PrrR!</h3>
+            <div class='w-full border-b-[1px] border-b-accent'></div>
+		</article>
+		<article class='flex items-end justify-between w-full gap-x-6'>
+			<div class='w-full border-b-[1px] border-b-accent'></div>
+			<h3 class='font-mona-sans [font-stretch:ultra-expanded] font-medium text-6xl'>LinuDev</h3>
+            <div class='w-full border-b-[1px] border-b-accent'></div>
+			<img src='https://i.imgur.com/nviaO3x.png' alt='Captura de pantalla del proyecto LiNews' class='aspect-video max-w-md rounded-3xl grayscale hover:grayscale-0' />
+			<div class='w-full border-b-[1px] border-b-accent'></div>
+		</article>
+	</main>
 </section>
