@@ -37,6 +37,17 @@ module.exports = {
 					success: '#86EFAC',
 					warning: '#FDE68A',
 					error: '#FCA5A5'
+				},
+				light: {
+					primary: '#353C51',
+					secondary: '#434A63',
+					accent: '#9799B6',
+					neutral: '#272D3F',
+					'base-100': '#E1DFF0',
+					info: '#93c5fd',
+					success: '#4ade80',
+					warning: '#fcd34d',
+					error: '#fb7185'
 				}
 			}
 		]
