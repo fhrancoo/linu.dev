@@ -58,7 +58,10 @@ import Menu from '@components/Menu.astro'
 				smooth: true,
 				multiplier: 0.75,
 				scrollFromAnywhere: true,
-				smartphone: { smooth: true }
+				tablet: {
+					smooth: false,
+					breakpoint: 1024,
+				},
 			});
 			});
 			setTimeout(() => {
