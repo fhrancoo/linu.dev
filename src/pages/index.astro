@@ -54,10 +54,14 @@ import Menu from '@components/Menu.astro'
 			import LocomotiveScroll from 'locomotive-scroll'
 			window.addEventListener("load", () => {
 			const scroll = new LocomotiveScroll({
-				el: document.querySelector("[data-scroll-container]"),
+				el: document.querySelector("[data-scroll-container]") as HTMLElement,
 				smooth: true,
 				multiplier: 0.75,
 				scrollFromAnywhere: true,
+				tablet: {
+					smooth: true,
+					breakpoint: 768
+				},
 			});
 			});
 			setTimeout(() => {
