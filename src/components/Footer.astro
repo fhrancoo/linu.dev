@@ -1,6 +1,20 @@
 ---
-
+const year = new Date().getFullYear()
 ---
-<footer class="">
-    <div class=""></div>
-</footer>
+<div class='text-neutral bg-base-content flex justify-start h-[2%] absolute w-full bottom-0 px-12 rounded-t-lg'>
+    <footer class='flex items-center justify-between w-full'>
+        <div class=''>
+            <h2 class='text-3xl font-extralight [font-stretch:ultra-expanded] font-mona-sans'>© {year}</h2>
+        </div>
+        <div class='flex items-start justify-end gap-16 uppercase font-mona-sans [font-stretch:ultra-expanded] text-xs'>
+            <ul class='flex items-start justify-center flex-col gap-2'>
+                <li class=''>Linkedin</li>
+                <li class=''>Disponible Para contratar</li>
+            </ul>
+            <ul class='flex items-start justify-center flex-col gap-2'>
+                <li class=''>Copyrights</li>
+                <li class=''>FAQs</li>
+            </ul>
+        </div>
+    </footer>
+</div>
