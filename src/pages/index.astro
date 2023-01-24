@@ -58,6 +58,7 @@ import Repositories from '@components/Repositories.astro'
 			import UAParser from 'ua-parser-js'
 			const parser = new UAParser()
 			const result = parser.getResult()
+			console.log(result)
 			if (result.os.name !== 'iOS' && result.os.name !== 'Android') {
 				const locoScroll = new LocomotiveScroll({
 					el: document.querySelector('[data-scroll-container]'),
