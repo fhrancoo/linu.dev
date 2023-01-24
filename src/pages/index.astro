@@ -56,7 +56,7 @@ import Repositories from '@components/Repositories.astro'
 			import LocomotiveScroll from 'locomotive-scroll'
 			
 			import UAParser from 'ua-parser-js'
-			const parser = new UAParser()
+			const parser = new UAParser('navigator.userAgent')
 			const result = parser.getResult()
 			if (result.os.name !== 'iOS' && result.os.name !== 'Android') {
 				const locoScroll = new LocomotiveScroll({
