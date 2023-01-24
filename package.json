@@ -23,7 +23,7 @@
     "theme-change": "2.3.0"
   },
   "devDependencies": {
-    "@astrojs/preact": "1.2.0",
+    "@astrojs/preact": "^0.2.0",
     "@types/locomotive-scroll": "4.1.0",
     "autoprefixer": "10.4.13",
     "daisyui": "2.47.0",
@@ -39,7 +39,8 @@
     "prettier": "2.8.1",
     "prettier-plugin-astro": "0.7.2",
     "sass": "1.57.1",
-    "standard": "17.0.0"
+    "standard": "17.0.0",
+    "ua-parser-js": "0.7.33"
   },
   "keywords": [],
   "author": "",
