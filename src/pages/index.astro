@@ -30,7 +30,7 @@ import Repositories from '@components/Repositories.astro'
 				</div>
 			</div>
 		</div>
-		<div class="" data-scroll-container>
+		<div class='' data-scroll-container>
 			<Header />
 			<Hero />
 			<Projects />
@@ -43,7 +43,7 @@ import Repositories from '@components/Repositories.astro'
 			if (localStorage.getItem('theme') === null) {
 				document.documentElement.setAttribute('data-theme', 'dark')
 			} else document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
-			// "theme" LocalStorage value is set by the package to remember user preference.
+			// 'theme' LocalStorage value is set by the package to remember user preference.
 			// The value is checked and applyed before rendering anything.
 		</script>
 		<script>
@@ -58,23 +58,17 @@ import Repositories from '@components/Repositories.astro'
 			import UAParser from 'ua-parser-js'
 			const parser = new UAParser()
 			const result = parser.getResult()
-			console.log(result)
 			if (result.os.name !== 'iOS' && result.os.name !== 'Android') {
-				window.addEventListener("load", () => {
-				const scroll = new LocomotiveScroll({
-					el: document.querySelector("[data-scroll-container]"),
+				const locoScroll = new LocomotiveScroll({
+					el: document.querySelector('[data-scroll-container]'),
 					smooth: true,
 					multiplier: 0.75,
 					scrollFromAnywhere: true,
-					tablet: {
-						smooth: false,
-						breakpoint: 1200,
-					},
-				});
-				});
-				setTimeout(() => {
-				scroll.update()
-				}, 5000)
+				})
+
+				window.addEventListener('load', () => {
+					locoScroll.update()
+				})
 			}
 		</script>
 	</body>
