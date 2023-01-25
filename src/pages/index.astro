@@ -69,15 +69,7 @@ import Repositories from '@components/Repositories.astro'
 				window.addEventListener('load', () => {
 					locoScroll.update()
 				})
-				let f_flag = true
-				locoScroll.on('scroll', (args) => {
-					if (typeof args.currentElements['second-footer'] === 'object' && f_flag == true) {
-						locoScroll.update()
-					f_flag = false
-					}
-				})
 			}
-
 		</script>
 	</body>
 </html>
