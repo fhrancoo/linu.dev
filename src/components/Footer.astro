@@ -2,7 +2,7 @@
 const year = new Date().getFullYear()
 ---
 <div class='text-neutral bg-base-content flex justify-start h-[2%] absolute w-full bottom-0 px-12 rounded-t-lg'>
-    <footer class='flex items-center justify-between w-full'>
+    <footer class='flex items-center justify-between w-full footer' data-scroll data-scroll-id='footer'>
         <div class=''>
             <h2 class='text-3xl font-extralight [font-stretch:ultra-expanded] font-mona-sans'>© {year}</h2>
         </div>
@@ -18,3 +18,12 @@ const year = new Date().getFullYear()
         </div>
     </footer>
 </div>
+<script>
+let f_flag = true
+locoScroll.on('scroll', (args) => {
+    if (typeof args.currentElements['second-footer'] === 'object' && f_flag == true) {
+        locoScroll.update()
+       f_flag = false
+    }
+})
+</script>
