@@ -18,12 +18,3 @@ const year = new Date().getFullYear()
         </div>
     </footer>
 </div>
-<script>
-let f_flag = true
-locoScroll.on('scroll', (args) => {
-    if (typeof args.currentElements['second-footer'] === 'object' && f_flag == true) {
-        locoScroll.update()
-       f_flag = false
-    }
-})
-</script>
