@@ -5,7 +5,6 @@ tags: [Frontend]
 image: 'https://i.imgur.com/lba4Wfq.png'
 keywords: "first project todolist todo list to do nucba nucbantastico javascript js jquery const var let "
 publishDate: 2022-10-19
-updateDate: 2023-01-28
 ---
 
 <i>Esta semana comenzamos a aplicar lo básico de __Javascript__ en el bootcamp de NUCBA. Estamos haciendo un ToDoList con HTML + CSS + JS.</i>

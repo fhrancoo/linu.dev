@@ -22,7 +22,7 @@ const posts = (await getCollection('blog')).sort(
                                     </h2>
                                     <p class=''>{post.data.description}</p>
                                     <div class='card-actions justify-end'>
-                                        { post.data.tags.map((tag) => (
+                                        {post.data.tags.map((tag) => (
                                             <span class='badge badge-outline'>{tag}</span>
                                         ))}
                                     </div>
@@ -33,5 +33,5 @@ const posts = (await getCollection('blog')).sort(
                 ))
             }
         </ul>
-    </section>
+    </section>    
 </Layout>
