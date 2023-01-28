@@ -4,6 +4,7 @@ import Head from '@components/Head.astro'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
 import Menu from '@components/Menu.astro'
+import MenuButton from '@components/MenuButton.astro'
 ---
 
 <!DOCTYPE html>
@@ -12,20 +13,8 @@ import Menu from '@components/Menu.astro'
 	class='scrollbar-thin scrollbar-thumb-accent scrollbar-track-base-100 scrollbar-thumb-rounded-md'>
 	<Head />
 	<body>
-		<Menu />
-		<div class='flex items-center justify-center fixed right-3 z-[2] top-10' id='menutoggle'>
-			<div
-				class='group flex btn btn-circle bg-accent p-2 hover:bg-[#989AB7]'>
-				<div class='space-y-2'>
-					<span
-						class='block h-1 w-6 origin-center rounded-full bg-neutral transition-transform ease-in-out'
-						id='span1'></span>
-					<span
-						class='block h-1 w-4 origin-center rounded-full bg-primary transition-transform ease-in-out'
-						id='span2'></span>
-				</div>
-			</div>
-		</div>
+		<Menu />	
+		<MenuButton />
 		<div class='' data-scroll-container>
 			<Header />
             <slot />
