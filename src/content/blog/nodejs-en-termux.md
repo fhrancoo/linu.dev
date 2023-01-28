@@ -1,6 +1,7 @@
 ---
 title: "NodeJS en Termux (y sus problemas)"
 tags: [Skills, Shell, Android]
+image: 'https://i.imgur.com/VwQj4S9.png'
 publishDate: 2022-06-25
 updatedDate: 2023-01-27
 keywords: "android termux linux arch artix configurando configurar setup programar programming hub fullstack developer learning how to ide IDE myTermux ohmyzsh zsh bat cat cava ncmpcpp mpd mpc mpv firefox develop developing programando tablet samsung xiaomi tab galaxy nodejs npm nvm"

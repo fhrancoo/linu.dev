@@ -1,20 +1,57 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content'
 
-type Props = CollectionEntry<'blog'>['data'];
-const { title, description, pubDate, updatedDate, image, tags } = Astro.props;
+type Props = CollectionEntry<'blog'>['data']
+const { title, description, publishDate, updatedDate, image, tags } = Astro.props
 ---
-<article>
-  {image && <img width={720} height={360} src={image} alt="" />}
-  <h1 class="title">{title}</h1>
-  {pubDate && <time>{pubDate}</time>}
-  {
-    updatedDate && (
-      <div>
-        Last updated on <time>{updatedDate}</time>
-      </div>
-    )
-  }
-  <hr />
-  <slot />
-</article>
+
+<figure class='flex items-center'>
+	{
+		image && (
+			<img
+				src={image}
+				alt={title}
+				class='w-full h-[400px] object-cover object-top rounded-lg mx-10'
+			/>
+		)
+	}
+</figure>
+<div class='flex items-start justify-start gap-x-2 my-9 mx-10 font-mona-sans'>
+	{tags && tags.map((tag) => <span class='badge badge-outline badge-lg'>{tag}</span>)}
+</div>
+<div class='flex items-center justify-between mt-20 mx-10 font-mona-sans'>
+	<h1 class='title [font-stretch:ultra-expanded] max-w-3xl font-black text-7xl'>{title}</h1>
+	<div class='text-sm flex-col'>
+		{
+			publishDate && (
+				<time class='mb-2 text-neutral-content text-opacity-60'>
+					{publishDate.toLocaleDateString('es-ar', {
+						year: 'numeric',
+						month: 'short',
+						day: 'numeric'
+					})}
+				</time>
+			)
+		}
+		{
+			updatedDate && (
+				<div class='mt-2'>
+					Última Actualización{' '}
+					<time>
+						{updatedDate.toLocaleDateString('es-ar', {
+							year: 'numeric',
+							month: 'short',
+							day: 'numeric'
+						})}
+					</time>
+				</div>
+			)
+		}
+	</div>
+</div>
+<div class='divider mx-10'></div>
+<main class='flex items-center justify-center w-full font-mona-sans mx-1'>
+	<article class='prose prose-img:rounded-xl prose-headings:font-mona-sans xl:prose-xl my-8 mb-16'>
+		<slot />
+	</article>
+</main>
