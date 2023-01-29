@@ -54,10 +54,11 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [require('@tailwindcss/line-clamp'),
-	require('tailwind-scrollbar'),
-	require('@tailwindcss/typography'),
-	require('daisyui')],
+	plugins: [
+		require('@tailwindcss/line-clamp'),
+		require('tailwind-scrollbar'),
+		require('@tailwindcss/typography'),
+		require('daisyui')],
 	variants: {
 		scrollbar: ['rounded']
 	}
