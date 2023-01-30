@@ -1,6 +1,6 @@
 ---
 title: "Mi Instalación de Archlinux"
-image: "./img_blog/archlinux-install.webp"
+image: "/img_blog/archlinux-install.webp"
 tags: [Linux, Shell]
 publishDate: 2022-05-06
 keywords: "find with command line in linux ubuntu archlinux elementary os distro distribution files trash owner screen shot screenshot windows partition resize disk drive turn off minimize wm manager kill process .bin .run install shrink disk ipconfig thunar file shortcut hotkey keybind $PATH vim neovim nvim folder mount iso disk extract rsync ssh youtube-dl mp3"

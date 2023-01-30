@@ -1,6 +1,6 @@
 ---
 title: "Configurando Termux para programar"
-image: "./img_blog/termux-front.webp"
+image: "/img_blog/termux-front.webp"
 tags: [Skills, Shell, Android]
 publishDate: 2022-06-24
 keywords: "android termux linux arch artix configurando configurar setup programar programming hub fullstack developer learning how to ide IDE myTermux ohmyzsh zsh bat cat cava ncmpcpp mpd mpc mpv firefox develop developing programando tablet samsung xiaomi tab galaxy"

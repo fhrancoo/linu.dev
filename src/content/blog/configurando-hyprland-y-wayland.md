@@ -1,7 +1,7 @@
 ---
 title: "Instalando y configurando Hyprland + Wayland Tips"
 description: "Como configurar hyprland y tener el mejor desktop!"
-image: "./img_blog/hyprland.webp"
+image: "/img_blog/hyprland.webp"
 tags: [Linux]
 keywords: "linux desktop hyprland wayland hypr archlinux ubuntu nix nixos starship dotfiles dots enviroment window manager wm artix config configuration settings set up setup fedora debian zsh bash"
 publishDate: 2023-01-21
@@ -9,7 +9,7 @@ publishDate: 2023-01-21
 
 Si llegaste hasta acá es porque habrás notado que existe __Hyrpland__ o __Wayland__. En esta *especie de tutorial* te voy a enseñar como dejar configurado ambos para que se vea así:
 
-![](./img_blog/hyprland.webp)
+![](/img_blog/hyprland.webp)
 
 
 ## Instalación de Paquetes y Dependencias
