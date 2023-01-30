@@ -1,7 +1,7 @@
 ---
 title: "Github"
 description: "Conociendo Github, sus herramientas y utilidades"
-image: "https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/0a92abd8dca12607115999a623439e35"
+image: "./img_blog/github.webp"
 tags: [Skills, Git]
 keywords: "github git ssh readme shields badge https errors"
 publishDate: 2022-08-16

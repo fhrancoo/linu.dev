@@ -1,6 +1,6 @@
 ---
 title: "Aprendiendo Javascript desde Cero | NUCBA"
-image: "https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/e1e19b5caf6feb57f49a4fb2e19f599a"
+image: "./img_blog/javascript.webp"
 tags: [Web Dev, Javascript, Frontend]
 publishDate: 2022-10-13
 keywords: "javascript learning aprendiendo desde cero js jscript typerscript react frontend learn web developer desarrollador desarrollo programador programar aprender reactjs tsx noob nuevo"
