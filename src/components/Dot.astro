@@ -1,0 +1,82 @@
+---
+---
+
+<style lang='sass'>
+	.dot-container
+		position: fixed
+		display: block
+		top: 0
+		left: 0
+		z-index: 1000
+		mix-blend-mode: exclusion
+		pointer-events: none
+		will-change: width, height
+
+		.dot
+			position: relative
+			width: 0
+			height: 0
+			border-radius: 50%
+			background-color: white
+			transform: translate(-50%, -50%)
+			transform: -webkit-translate(-50%, -50%)
+			transform: -moz-translate(-50%, -50%)
+			transition: width 0.5s ease, height 0.5s ease
+			-webkit-transition: width 0.5s ease, height 0.5s ease
+
+		&.active .dot
+			width: 4vh
+			height: 4vh
+
+		&.disabled .dot, &.introDisabled .dot
+			width: 0 !important
+			height: 0 !important
+
+		&.hover .dot
+			width: 7.5vh
+			height: 7.5vh
+</style>
+<div class='dot-container active'>
+	<div class='dot'></div>
+</div>
+<script>
+	const dotContainer = document.querySelector('.dot-container')
+	const dot = document.querySelector('.dot')
+	const links = document.querySelectorAll('a')
+
+	class CursorDot {
+		static currentPosition = { x: 0, y: 0 }
+		static targetPosition = { x: 0, y: 0 }
+		static currentMousePosition = { x: 0, y: 0 }
+
+		static init() {
+			document.addEventListener('mousemove', this.updateMouseCoords.bind(this))
+			this.animate()
+		}
+
+		static updateMouseCoords(e) {
+			this.currentMousePosition = { x: e.clientX, y: e.clientY }
+			this.targetPosition = { x: e.clientX, y: e.clientY }
+		}
+
+		static animate() {
+			this.currentPosition.x += (this.targetPosition.x - this.currentPosition.x) * 0.4
+			this.currentPosition.y += (this.targetPosition.y - this.currentPosition.y) * 0.4
+
+			dotContainer.style.transform = `translate(${this.currentPosition.x}px, ${this.currentPosition.y}px)`
+
+			requestAnimationFrame(() => this.animate())
+		}
+	}
+
+	CursorDot.init()
+
+	links.forEach((link) => {
+		link.addEventListener('mouseenter', () => {
+			dot.style.transform = `scale(2)`
+		})
+		link.addEventListener('mouseleave', () => {
+			dot.style.transform = `scale(1)`
+		})
+	})
+</script>

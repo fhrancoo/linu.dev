@@ -1,5 +1,6 @@
 ---
 import 'locomotive-scroll/dist/locomotive-scroll.css'
+import Dot from '@components/Dot.astro'
 import Head from '@components/Head.astro'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
@@ -12,7 +13,8 @@ import MenuButton from '@components/MenuButton.astro'
 	lang='en'
 	class='scrollbar-thin scrollbar-thumb-accent scrollbar-track-base-100 scrollbar-thumb-rounded-md'>
 	<Head />
-	<body>
+	<body class='cursor-none'>
+		<Dot />
 		<Menu />	
 		<MenuButton />
 		<div class='' data-scroll-container>
