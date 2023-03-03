@@ -1,6 +1,4 @@
 ---
-import 'locomotive-scroll/dist/locomotive-scroll.css'
-import Dot from '@components/Dot.astro'
 import Head from '@components/Head.astro'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
@@ -13,15 +11,12 @@ import MenuButton from '@components/MenuButton.astro'
 	lang='en'
 	class='scrollbar-thin scrollbar-thumb-accent scrollbar-track-base-100 scrollbar-thumb-rounded-md'>
 	<Head />
-	<body class='cursor-none'>
-		<Dot />
+	<body>
 		<Menu />	
 		<MenuButton />
-		<div class='' data-scroll-container>
-			<Header />
-            <slot />
-			<Footer />
-		</div>
+		<Header />
+		<slot />
+		<Footer />
 		<script is:inline>
 			// ☝️ This script prevent the FART effect.
 			if (localStorage.getItem('theme') === null) {
@@ -36,24 +31,6 @@ import MenuButton from '@components/MenuButton.astro'
 			import { themeChange } from 'theme-change'
 			themeChange()
 			// 👆 you could import the CDN directly instead of these two lines
-
-			import LocomotiveScroll from 'locomotive-scroll'
-			
-			import UAParser from 'ua-parser-js'
-			const parser = new UAParser('navigator.userAgent')
-			const result = parser.getResult()
-			if (result.os.name !== 'iOS' && result.os.name !== 'Android') {
-				const locoScroll = new LocomotiveScroll({
-					el: document.querySelector('[data-scroll-container]'),
-					smooth: true,
-					multiplier: 0.85,
-					scrollFromAnywhere: true,
-				})
-
-				window.addEventListener('load', () => {
-					locoScroll.update()
-				})
-			}
 		</script>
 	</body>
 </html>
