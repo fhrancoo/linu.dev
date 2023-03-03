@@ -1,29 +1,53 @@
 ---
 ---
 
-<section class='w-full h-full flex flex-col items-center justify-center my-16 px-12' id='project'>
-	<h2 class='text-9xl font-mona-sans [font-stretch:ultra-expanded] font-bold w-full'>Projects</h2>
+<section class='w-full h-full flex flex-col items-center justify-center my-8 px-6 md:px-48'>
+	<h2 class='text-4xl md:text-9xl font-mona-sans [font-stretch:ultra-expanded] font-bold w-full'>Trabajos Seleccionados</h2>
     <div class="divider"></div>
-	<main class='w-full my-36 flex-col items-center justify-center flex gap-32'>
-		<article class='flex items-end justify-between w-full gap-x-6 grayscale transition-all duration-500 blur-sm hover:filter-none'>
-			<h3 class='font-mona-sans [font-stretch:ultra-expanded] font-medium text-6xl'>LiNews</h3>
-			<div class='w-full border-b-[1px] border-b-accent'></div>
-			<img src='/linews.webp' alt='Captura de pantalla del proyecto LiNews' class='aspect-video max-w-md rounded-3xl drop-shadow-2xl' />
-			<div class='w-full border-b-[1px] border-b-accent'></div>
-		</article>
-		<article class='flex items-end justify-between w-full gap-x-6 grayscale transition-all duration-500 blur-sm hover:filter-none'>
-			<div class='w-full border-b-[1px] border-b-accent'></div>
-			<img src='/prr.webp' alt='Captura de pantalla del proyecto LiNews' class='aspect-video max-w-md rounded-3xl drop-shadow-2xl object-cover' />
-			<div class='w-full border-b-[1px] border-b-accent'></div>
-			<h3 class='font-mona-sans [font-stretch:ultra-expanded] font-medium text-6xl'>PrrR!</h3>
-            <div class='w-full border-b-[1px] border-b-accent'></div>
-		</article>
-		<article class='flex items-end justify-between w-full gap-x-6 grayscale transition-all duration-500 blur-sm hover:filter-none'>
-			<div class='w-full border-b-[1px] border-b-accent'></div>
-			<h3 class='font-mona-sans [font-stretch:ultra-expanded] font-medium text-6xl'>LinuDev</h3>
-            <div class='w-full border-b-[1px] border-b-accent'></div>
-			<img src='/linudev.webp' alt='Captura de pantalla del proyecto LiNews' class='aspect-video max-w-md rounded-3xl drop-shadow-2xl' />
-			<div class='w-full border-b-[1px] border-b-accent'></div>
-		</article>
-	</main>
 </section>
+<main class='w-full mb-20 flex flex-col items-center justify-center gap-8 md:px-6'>
+	<article class='h-screen bg-[url(/linews.webp)] bg-fixed bg-auto bg-center w-full'>
+		<div class='backdrop-blur-sm backdrop-brightness-75 w-full h-full flex items-start justify-between flex-col'>
+			<div class='p-4 flex gap-2'>
+				<div class='badge badge-lg badge-outline text-orange-500'>Astro</div>
+				<div class='badge badge-lg badge-outline text-cyan-500'>Tailwind</div>
+				<div class='badge badge-lg badge-outline text-yellow-500'>Javascript</div>
+			</div>
+			<div class='w-full h-full flex flex-col items-center justify-center'>
+				<h3 class='text-7xl'>LiNEWS</h3>
+				<div class='divider px-20'></div>
+				<p class='text-xl font-light max-w-xs'>Portal de noticias creado como ejercicio final de Javascript.</p>
+			</div>
+		</div>
+	</article>
+	<article class='h-screen bg-[url(/prr.webp)] bg-fixed bg-auto bg-center w-full'>
+		<div class='backdrop-blur-sm backdrop-brightness-75 w-full h-full flex items-start justify-between flex-col'>
+			<div class='p-4 flex gap-2'>
+				<div class='badge badge-lg badge-outline text-red-500'>HTML</div>
+				<div class='badge badge-lg badge-outline text-cyan-600'>CSS</div>
+			</div>
+			<div class='w-full h-full flex flex-col items-center justify-center'>
+				<h3 class='text-7xl'>PrrR!</h3>
+				<div class='divider px-20'></div>
+				<p class='text-xl font-light max-w-xs'>Landing Page realizada para un Coffee Store de la zona.</p>
+			</div>
+		</div>
+	</article>
+	<article class='h-screen bg-[url(/linudev.webp)] bg-fixed bg-auto bg-center w-full'>
+		<div class='backdrop-blur-sm backdrop-brightness-75 w-full h-full flex items-start justify-between flex-col'>
+			<div class='p-4 flex gap-2'>
+				<div class='badge badge-lg badge-outline text-orange-500'>Astro</div>
+				<div class='badge badge-lg badge-outline text-cyan-500'>Tailwind</div>
+				<div class='badge badge-lg badge-outline text-yellow-500'>Javascript</div>
+			</div>
+			<div class='w-full h-full flex flex-col items-center justify-center'>
+				<h3 class='text-7xl'>LinuDEV</h3>
+				<div class='divider px-20'></div>
+				<p class='text-xl font-light max-w-xs'>Portfolio personal. (Desaparecerá al agregar el siguiente proyecto. Está provisorio).</p>
+			</div>
+		</div>
+	</article>
+	<div class='flex w-full items-center justify-end px-6'>
+		<a href='#' class='btn btn-outline btn-secondary'>Todos los Proyectos</a>
+	</div>
+</main>
