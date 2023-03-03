@@ -1,5 +1,7 @@
 ---
-
+import github from '../svg/github.svg'
+import linkedin from '../svg/linkedin.svg'
+import twitter from '../svg/twitter.svg'
 ---
 
 <div class='divider px-20 md:px-56 mb-8'></div>
@@ -10,7 +12,14 @@
             <p class='font-helvetica font-medium md:max-w-xl'>Soy un programador apasionado por el diseño innovador y de vanguardia. Mi objetivo es crear experiencias únicas y memorables que hagan que tus usuarios se enamoren de tu sitio web.</p>
         </div>
     </div>
-    <div class='flex justify-end w-full'>
+    <div class='flex items-center justify-end w-full gap-2'>
+        <a href='https://github.com/linuxmobile' target='_blank' rel='noopener noreferrer' class='btn btn-circle btn-primary'><img src={ github } alt='github button' class=''></a>
+        <a href='https://www.linkedin.com/in/braiandiez/' target='_blank' rel='noopener noreferrer' class='btn btn-circle btn-primary'><img src={ linkedin } alt='linkedin button' class=''></a>
+        <a href='https://twitter.com/linuxmobileok' target='_blank' rel='noopener noreferrer' class='btn btn-circle btn-primary'><img src={ twitter } alt='twitter button' class=''></a>
+    </div>
+    <div class='flex items-center justify-end w-full gap-2 flex-wrap sm:flex-nowrap'>
         <a href='/about' class='btn btn-wide btn-outline btn-secondary'>Conoce más de mí</a>
+        <a href='' class='btn btn-outline btn-secondary'>Estoy viendo</a>
+        <a href='mailto:bdiez19@gmail.com' target='_blank' rel='noopener noreferrer' class='btn btn-outline btn-success'>contratame</a>
     </div>
 </section>
