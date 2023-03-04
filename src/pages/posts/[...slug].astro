@@ -1,5 +1,5 @@
 ---
-import LayoutFast from 'layout/Layout-Fast.astro'
+import Layout from 'layout/Layout.astro'
 import { CollectionEntry, getCollection } from 'astro:content'
 import BlogPost from 'layout/BlogPost.astro'
 
@@ -16,8 +16,8 @@ const post = Astro.props
 const { Content } = await post.render()
 ---
 
-<LayoutFast>
+<Layout>
 	<BlogPost {...post.data}>
 		<Content />
 	</BlogPost>
-</LayoutFast>
+</Layout>
