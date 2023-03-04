@@ -3,25 +3,22 @@ import Utterance from '@components/Utterance.astro'
 import type { CollectionEntry } from 'astro:content'
 
 type Props = CollectionEntry<'blog'>['data']
-const { title, description, publishDate, updatedDate, image, tags } = Astro.props
+const { title, publishDate, updatedDate, image, tags } = Astro.props
 ---
 
 <figure class='flex items-center'>
 	{
 		image && (
-			<img
-				src={image}
-				alt={title}
-				class='w-full h-[400px] object-cover object-top rounded-lg mx-10'
-			/>
+			<img src={image} alt={title}
+				class='w-full md:h-[400px] object-cover object-top rounded-lg px-10' />
 		)
 	}
 </figure>
-<div class='flex items-start justify-start gap-x-2 my-9 mx-10 font-mona-sans'>
+<div class='flex items-start justify-start gap-x-2 my-5 md:my-9 px-10 font-mona-sans'>
 	{tags && tags.map((tag) => <span class='badge badge-outline badge-lg'>{tag}</span>)}
 </div>
-<div class='flex items-center justify-between mt-20 mx-10 font-mona-sans'>
-	<h1 class='title [font-stretch:ultra-expanded] max-w-3xl font-black text-7xl'>{title}</h1>
+<div class='flex items-center justify-between mt-20 px-10 lg:px-60 font-mona-sans'>
+	<h1 class='title [font-stretch:ultra-expanded] max-w-[10rem] sm:max-w-xs md:max-w-xl font-black text-xl sm:text-2xl md:text-5xl lg:text-7xl'>{title}</h1>
 	<div class='text-sm flex-col'>
 		{
 			publishDate && (
@@ -50,9 +47,10 @@ const { title, description, publishDate, updatedDate, image, tags } = Astro.prop
 		}
 	</div>
 </div>
-<div class='divider mx-10'></div>
-<main class='flex items-center justify-center w-full font-mona-sans mx-1'>
-	<article class='prose prose-img:rounded-xl prose-headings:font-mona-sans prosa-p:font- xl:prose-xl my-8 mb-16'>
+<div class='divider px-10 lg:px-60'></div>
+<main class='flex items-center justify-center w-full font-mona-sans px-1'>
+	<article 
+	class='prose-sm md:prose-lg px-10 lg:px-60 prose-img:rounded-xl prose-headings:font-mona-sans prose-headings:[font-stretch:ultra-expanded] prose-h2:font-bold prose-h3:font-medium prose-p:font-mona-sans mt-8'>
 		<slot />
 		<Utterance />
 	</article>
