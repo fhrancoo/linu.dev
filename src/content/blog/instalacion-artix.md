@@ -8,15 +8,21 @@ keywords: "find with command line in linux ubuntu archlinux elementary os distro
 
 Tips / Instalación / Artix
 
-👉 Nota: [ISO de Artix / dinit](https://iso.artixlinux.org/iso/artix-base-dinit-20220123-x86_64.iso)
+👉 **Nota:** [ISO de Artix / dinit](https://iso.artixlinux.org/iso/artix-base-dinit-20220123-x86_64.iso)
 
-::: warning
-Recuerda que el usuario y contraseña es "artix"
-:::
+<div class="alert alert-warning shadow-lg">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+    <span>Recuerda que el usuario y contraseña es "artix"</span>
+  </div>
+</div>
 
-::: danger
-Importante hacer todo el proceso como root (haciendo `su` y dando enter)
-:::
+<div class="alert alert-error shadow-lg">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    <span>Importante hacer todo el proceso como root (haciendo <kbd>su</kbd> y dando enter)</span>
+  </div>
+</div>
 
 ## Configuración del lenguaje
 
@@ -45,7 +51,7 @@ fdisk -l
 
 🔅 Particionamos el disco:
 
-👉 Note: __En mi caso mi disco es NVME, por ende remplacen NVME por sda, sdb o el que tengan.__
+👉 **Note:** __En mi caso mi disco es NVME, por ende remplacen NVME por sda, sdb o el que tengan.__
 
 ::: code-output-flex
 ~~~ bash
@@ -62,7 +68,7 @@ cfdisk /dev/nvme0n1
 ~~~
 :::
 
-👉 Note: <i>La instalación que realizo es exclusivamente para UEFI, y también consideren que no estoy utilizando dual boot. Sólo artix.</i>
+👉 **Note:** <i>La instalación que realizo es exclusivamente para UEFI, y también consideren que no estoy utilizando dual boot. Sólo artix.</i>
 
 🔅 Formateamos las particiones:
 
@@ -85,7 +91,7 @@ mount /dev/disk/by-label/EFI /mnt/boot
 
 🔅 Conectamos al internet:
 
-👉 Note: <i>En mi caso, utilizo Cable. Así que no solicito demasiado configuración.</i>
+👉 **Note:** <i>En mi caso, utilizo Cable. Así que no solicito demasiado configuración.</i>
 
 ~~~ bash
 ping artixlinux.org
@@ -133,7 +139,7 @@ artix-chroot /mnt
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_aires /etc/localtime  # Acá tenemos que poner la region/ciudad.
 ~~~
 
-👉 Note: __Con hwclock generamos el /etc/adjtime__
+👉 **Note:** __Con hwclock generamos el /etc/adjtime__
 
 ~~~ bash
 hwclock --systohc
@@ -146,7 +152,7 @@ pacman -s nano
 nano /etc/locale.gen
 ~~~
 
-👉 Note: __En el locale.gen yo elijo en_US. (Si querés el sistema en español es_ES.__
+👉 **Note:** __En el locale.gen yo elijo en_US. (Si querés el sistema en español es_ES.__
 
 ~~~ bash
 # generamos los locales
@@ -159,7 +165,7 @@ locale-gen
 pacman -S grub efibootmgr
 ~~~
 
-👉 Note: __Mi configuración está pensada para sistemas UEFI. Atentos...__
+👉 **Note:** __Mi configuración está pensada para sistemas UEFI. Atentos...__
 
 🔅 Instalamos el grub:
 
@@ -228,9 +234,13 @@ umount -R /mnt          # Para desmontar
 reboot                  # Para reiniciar
 ~~~
 
-::: info
-Llegado a este punto en el que reiniciaste y no te apareció ningún error o inconveniente, quiere decir que ya terminaste de instalar la base del sistema __Artix__. Me gustaría dejarte unos pasos más a seguir que me sirvieron cuando no entendía nada.
-:::
+<div class="alert alert-info shadow-lg">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <span>Llegado a este punto en el que reiniciaste y no te apareció ningún error o inconveniente, quiere decir que ya terminaste de instalar la base del sistema <strong>Artix</strong>. Me gustaría dejarte unos pasos más a seguir que me sirvieron cuando no entendía nada.</span>
+  </div>
+</div>
+
 
 🔅 Habilitar DHCPCD para tener internet:
 
@@ -291,7 +301,9 @@ paru -S xf86-video-amdgpu vulkan-radeon mesa-libgl mesa-vdpau libvdpau-va-gl lib
 paru -S xf86-video-intel mesa-libgl libvdpau-va-gl #Intel
 ~~~
 
-::: success
-Bueno, eso es todo. Espero que te haya servido. Si llegaste hasta acá te pido que revises mis otras notas!
-:::
-
+<div class="alert alert-success shadow-lg">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    <span>Bueno, eso es todo. Espero que te haya servido. Si llegaste hasta acá te pido que revises mis otras notas!</span>
+  </div>
+</div>

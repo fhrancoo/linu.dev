@@ -6,14 +6,18 @@ publishDate: 2022-05-06
 keywords: "find with command line in linux ubuntu archlinux elementary os distro distribution files trash owner screen shot screenshot windows partition resize disk drive turn off minimize wm manager kill process .bin .run install shrink disk ipconfig thunar file shortcut hotkey keybind $PATH vim neovim nvim folder mount iso disk extract rsync ssh youtube-dl mp3"
 ---
 
-::: success
-Esta nota se mantendrá actualizada.
-:::
+<div class="alert alert-success shadow-lg">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    <span>Esta nota se mantendrá actualizada.</span>
+  </div>
+</div>
 
-Tips / Instalación / **archlinux**
+Tips / Instalación / **Archlinux**
 
-👉 Nota 1: No es exactamente un tutorial de instalación. Sino más bien mis notas.
-👉 Nota 2: Te recomiendo, siempre, guiarte con la wiki de Archlinux.
+👉 **Nota 1:** No es exactamente un tutorial de instalación. Sino más bien mis notas.
+
+👉 **Nota 2:** Te recomiendo, siempre, guiarte con la wiki de Archlinux.
 
 ## ISO
 
@@ -60,8 +64,14 @@ pacman -Syy
 
 🔅 Las particiones:
 
-::: warning
-**Atención**: _En mi caso, yo mantengo el disco sin dual boot, solo tengo un Sistema operativo y es Archlinux/Artix. Pero voy a enseñar el método que uso si necesito dejar Windows (¡por alguna razón!)_ 
+
+<div class="alert alert-error shadow-lg">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    <span><strong>Atención </strong>En mi caso, yo mantengo el disco sin dual boot, solo tengo un Sistema operativo y es Archlinux/Artix. Pero voy a enseñar el método que uso si necesito dejar Windows (¡por alguna razón!)</span>
+  </div>
+</div>
+
 ::: hsbox Hide / Show box inside
 
 ~~~ bash
@@ -93,7 +103,7 @@ _Dejando la carpeta EFI/Microsoft sin tocar_
 
 🔅 Particionamos el disco:
 
-👉 Note: __En mi caso mi disco es NVME, por ende remplacen NVME por sda, sdb o el que tengan.__
+👉 **Nota:** __En mi caso mi disco es NVME, por ende remplacen NVME por sda, sdb o el que tengan.__
 
 ::: code-output-flex
 ~~~ bash
@@ -110,7 +120,7 @@ cfdisk /dev/nvme0n1
 ~~~
 :::
 
-👉 Note: <i>La instalación que realizo es exclusivamente para UEFI, y también consideren que no estoy utilizando dual boot. Sólo arch/artix.</i>
+👉 **Note:** <i>La instalación que realizo es exclusivamente para UEFI, y también consideren que no estoy utilizando dual boot. Sólo arch/artix.</i>
 
 🔅 Formateamos las particiones:
 
@@ -158,7 +168,7 @@ arch-chroot /mnt
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_aires /etc/localtime  # Acá tenemos que poner la region/ciudad.
 ~~~
 
-👉 Note: __Con hwclock generamos el /etc/adjtime__
+👉 **Note:** __Con hwclock generamos el /etc/adjtime__
 
 ~~~ bash
 hwclock --systohc
@@ -185,7 +195,7 @@ KEYMAP=la-latin1
 pacman -S grub efibootmgr
 ~~~
 
-👉 Note 3: __Mi configuración está pensada para sistemas UEFI. Atentos...__
+👉 **Note 3:** __Mi configuración está pensada para sistemas UEFI. Atentos...__
 
 🔅 Instalamos el grub:
 
@@ -255,10 +265,15 @@ reboot                  # Para reiniciar
 ~~~
 
 
-::: info
-Llegado a este punto en el que reiniciaste y no te apareció ningún error o inconveniente, quiere decir que ya terminaste de instalar la base del sistema __Archlinux__. 
-Me gustaría dejarte unos pasos más (consejos) a seguir que me sirvieron cuando no entendía nada.
-:::
+<div class="alert alert-info shadow-lg">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <div class='flex flex-col gap-2'>
+      <span>Llegado a este punto en el que reiniciaste y no te apareció ningún error o inconveniente, quiere decir que ya terminaste de instalar la base del sistema __Archlinux__.</span>
+      <span>Me gustaría dejarte unos pasos más (consejos) a seguir que me sirvieron cuando no entendía nada.</span>
+    </div>
+  </div>
+</div>
 
 🔅 Habilitar DHCPCD para tener internet:
 
@@ -293,6 +308,9 @@ paru -S xf86-video-amdgpu vulkan-radeon mesa-libgl mesa-vdpau libvdpau-va-gl lib
 paru -S xf86-video-intel mesa-libgl libvdpau-va-gl #Intel
 ~~~
 
-::: success
-Bueno, eso es todo. Espero que te haya servido. Si llegaste hasta acá te pido que revises mis otras notas!
-:::
+<div class="alert alert-success shadow-lg">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    <span>Bueno, eso es todo. Espero que te haya servido. Si llegaste hasta acá te pido que revises mis otras notas!</span>
+  </div>
+</div>
