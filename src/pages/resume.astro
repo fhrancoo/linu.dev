@@ -83,16 +83,6 @@ import ResumeLayout from "layout/ResumeLayout.astro";
 <script>
     const main = document.getElementById('main')
 
-    function printPageArea(main) {
-        let printContent = document.getElementById('main').innerHTML
-        let originalContent = document.documentElement.outerHTML
-        document.body.innerHTML = printContent
-        window.print()
-        setTimeout(function () {
-            document.documentElement.outerHTML = originalContent
-        }, 500)
-    }
-
     main.addEventListener('click', () => {
         // printPageArea(main)
         window.print()
