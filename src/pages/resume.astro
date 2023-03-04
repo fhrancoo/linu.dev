@@ -1,12 +1,8 @@
 ---
-import Layout from 'layout/Layout.astro'
+import ResumeLayout from "layout/ResumeLayout.astro";
 ---
-<Layout>
-    <section class='w-full h-full flex flex-col items-start justify-center my-16 px-12 py-14 font-mona-sans'>
-        <h2 class='text-7xl font-bold [font-stretch:ultra-expanded] max-w-xl'>Curriculum // Resume</h2>
-    </section>
-    <section class='flex items-center justify-center pb-36 font-mona-sans text-primary'>
-        <main class='h-[27.9cm] w-[21.6cm] bg-base-content'>
+<ResumeLayout>
+        <main class='flex items-center justify-center h-[27.9cm] w-[21.6cm] bg-base-content font-mona-sans text-primary' id='main'>
             <article class='flex-col w-full h-full p-16'>
                 <div class='flex w-full justify-between items-start'>
                     <div class=''>
@@ -82,5 +78,23 @@ import Layout from 'layout/Layout.astro'
                 </div>
             </article>
         </main>
-    </section>
-</Layout>
+</ResumeLayout>
+
+<script>
+    const main = document.getElementById('main')
+
+    function printPageArea(main) {
+        let printContent = document.getElementById('main').innerHTML
+        let originalContent = document.documentElement.outerHTML
+        document.body.innerHTML = printContent
+        window.print()
+        setTimeout(function () {
+            document.documentElement.outerHTML = originalContent
+        }, 500)
+    }
+
+    main.addEventListener('click', () => {
+        // printPageArea(main)
+        window.print()
+    })
+</script>
