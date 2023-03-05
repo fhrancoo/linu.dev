@@ -1,20 +1,89 @@
 ---
 import Layout from 'layout/Layout.astro'
+
+import html from '../svg/html5.svg'
+import css from '../svg/css.svg'
+import js from '../svg/javascript.svg'
+import react from '../svg/react.svg'
+import tailwind from '../svg/tailwind.svg'
+import bootstrap from '../svg/bootstrap.svg'
+import sass from '../svg/sass.svg'
+import astro from '../svg/astro.svg'
+import vscode from '../svg/vscode.svg'
+import git from '../svg/git.svg'
+import bash from '../svg/bash.svg'
+import linux from '../svg/linux.svg'
+
+const bornDate = new Date('1994-09-08')
+const ageDiff = Date.now() - bornDate.getTime()
+const ageDate = new Date(ageDiff)
+const actualAge = Math.abs(ageDate.getUTCFullYear() - 1970)
 ---
 <Layout>
-    <section class='w-full h-full flex flex-col items-start justify-center my-16 px-12 font-mona-sans'>
+    <section class='w-full h-full flex flex-col gap-y-12 md:flex-row items-start justify-between my-16 px-12 font-mona-sans'>
         <div class=''>
-            <h3 class='text-7xl font-bold [font-stretch:ultra-expanded] max-w-lg'>Mi nombre es <span class=''>Braian</span></h3>
-            <div class='flex w-full'>
-                <div class='w-2/6'>
+            <h1 class='text-7xl font-bold [font-stretch:ultra-expanded] max-w-lg mb-16'>Mi nombre es <span class=''>Braian</span></h1>
+            <div class='flex w-full gap-x-6'>
+                <div class='w-36'>
                     <div class='divider'></div>
                 </div>
-                <div class='text-sm tracking-wide'>
-                    <p class=''>Soy Braian, programador web de Argentina.</p>
-                    <p class=''></p>
+                <div class='text-sm tracking-wide max-w-md gap-2 flex flex-col'>
+                    <p class=''>Soy un programador web de Argentina.</p>
+                    <p class=''>Me mueven las ganas de crear sitios y aplicaciones que, realmente, hagan una diferencia.</p>
+                    <p class=''>Mi mayor objetivo es crear experiencias únicas y memorables que logren que los usuarios se enamoren de mis creaciones.</p>
                 </div>
             </div>
         </div>
-        <div class=''></div>
+        <div class=''>
+            <figure><img src='/profile.webp' alt='profile pic' class='w-96 rounded-lg' /></figure>
+        </div>
+    </section>
+    <section class='w-full h-full flex flex-col md:flex-row items-start justify-between my-20 px-12 font-mona-sans gap-y-12'>
+        <div class=''>
+            <h2 class='uppercase tracking-widest font-light'>Tecnologías que domino</h2>
+            <div class='divider max-w-xs'></div>
+            <div class='grid grid-cols-2 gap-12'>
+                <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Frontend</h3>
+                <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
+                    <li class='btn btn-circle btn-sm'><img src={ html } alt='' class='w-6'></li>
+                    <li class='btn btn-circle btn-sm'><img src={ css } alt='' class='w-6'></li>
+                    <li class='btn btn-circle btn-sm'><img src={ js } alt='' class='w-6'></li>
+                    <li class='btn btn-circle btn-sm'><img src={ react } alt='' class='w-6'></li>
+                    <li class='btn btn-circle btn-sm'><img src={ bootstrap } alt='' class='w-6'></li>
+                    <li class='btn btn-circle btn-sm'><img src={ sass } alt='' class='w-6'></li>
+                </ul>
+                <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Frameworks</h3>
+                <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
+                    <li class='btn btn-circle btn-sm'><img src={ tailwind } alt='' class='w-6'></li>
+                    <li class='btn btn-circle btn-sm'><img src={ astro } alt='' class='w-6'></li>
+                </ul>
+                <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Herramientas</h3>
+                <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
+                    <li class='btn btn-circle btn-sm'><img src={ bash } alt='' class='w-6'></li>
+                    <li class='btn btn-circle btn-sm'><img src={ git } alt='' class='w-6'></li>
+                    <li class='btn btn-circle btn-sm'><img src={ linux } alt='' class='w-6'></li>
+                    <li class='btn btn-circle btn-sm'><img src={ vscode } alt='' class='w-6'></li>
+                </ul>
+            </div>
+        </div>
+        <div class='flex justify-end max-w-md text-primary'>
+            <ol class='relative border-l border-primary'>
+                <li class='mb-10 ml-4 bg-neutral rounded-md p-2'>
+                    <div class="absolute w-3 h-3 bg-primary rounded-full mt-1.5 -left-1.5 border border-primary"></div>
+                    <time class='mb-1 text-sm font-normal leading-none'>Agosto 2022 → Actualidad</time>
+                    <h2 class='text-lg font-black [font-stretch:ultra-expanded]'>↘ NUCBA</h2>
+                    <h3 class='text-md font-semibold'>Fullstack Developer</h3>
+                    <p class='mb-4 text-primary/60 text-sm font-medium'>En el Bootcamp de Nucba, se aprenden las habilidades más importantes para la programación. Tanto Frontend como Backend.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <section class='w-full h-full flex flex-col items-start justify-center my-48 font-mona-sans gap-y-12 px-12 md:px-56'>
+        <h2 class='font-black text-5xl text-left uppercase [font-stretch:ultra-expanded] hover:text-primary'>Sobre mi</h2>
+        <article class='h-full w-full flex flex-col items-center justify-center text-xl md:text-2xl leading-8 gap-y-3'>
+            <p>Tengo { actualAge } años, nací en Tres Arroyos, una pequeña ciudad de Buenos Aires. A la edad de 13 años recibí mi primer ordenador, y desde ahí me enamoré de la computación.</p>
+            <p>Desde ese entonces, también conocí Ubuntu, y ahí comenzó un amor geniuino por linux. Sistema que me acompaña a día de hoy.</p>
+            <p>De los 13 a los 18 años, tuve un serio problema de adicciones, el cual a través de mi credo logré dejar atrás. A los 21 años me casé con mi actual esposa (Dagny Sol, es su nombre). </p>
+        </article>
     </section>
 </Layout>
