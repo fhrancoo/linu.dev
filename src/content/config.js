@@ -14,7 +14,7 @@ const blog = defineCollection({
 		isDraft: z.boolean(),
 	}),
 })
-const news = defineCollection({
+const projects = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
@@ -25,4 +25,4 @@ const news = defineCollection({
 })
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
-export const collections = { blog, news }
+export const collections = { blog, projects }
