@@ -5,7 +5,15 @@ import type { CollectionEntry } from 'astro:content'
 type Props = CollectionEntry<'blog'>['data']
 const { title, publishDate, updatedDate, image, tags } = Astro.props
 ---
-
+<div class='flex items-start justify-start w-full px-6 md:px-24 mb-16'>
+  <div class="text-sm breadcrumbs">
+    <ul>
+      <li><a href='/' class='underline underline-offset-2 text-primary hover:text-accent transition-all ease-in-out duration-500'>Inicio</a></li>
+      <li><a href='/blog' class='underline underline-offset-2 text-primary hover:text-accent transition-all ease-in-out duration-500'>Blog</a></li> 
+      <li class='text-accent'>{title}</li>
+    </ul>
+  </div>
+</div>
 <figure class='flex items-center'>
 	{
 		image && (

@@ -151,6 +151,7 @@ const langColors = {
 	PogoScript: '#d80074',
 	LiveScript: '#499886',
 	JavaScript: '#f1e05a',
+  TailwindCSS: '#38BDF8',
 	VimL: '#199f4b',
 	PureScript: '#1D222D',
 	ABAP: '#E8274B',
