@@ -25,14 +25,14 @@ const postIsNEW = (post) => {
       </ul>
     </div>
   </div>
-  <h2 class='flex items-center justify-center w-full font-mona-sans [font-stretch:ultra-expanded] text-2xl sm:text-3xl md:text-4xl lg:text-6xl py-8 font-black'>Todos los post en "blog"</h2>
+  <h2 class='flex items-center justify-center w-full font-mona-sans [font-stretch:ultra-expanded] text-2xl sm:text-3xl md:text-4xl lg:text-6xl py-8 font-black'>Todos los artículos</h2>
   <div class='divider px-24'></div>
   <section class='flex items-center justify-center'>
      <ul class='flex items-center justify-center gap-10 flex-wrap font-mona-sans'>
       {
       posts.map((post) => (
-        <a href={`/blog/${post.slug}/`} class=''>
-        <li class='card w-96 max-w-xs sm:max-w-none bg-neutral shadow-xl h-full min-h-[450px] justify-between'>
+      <a href={`/blog/${post.slug}/`} class=''>
+        <li class='card w-96 max-w-xs sm:max-w-none bg-neutral shadow-xl h-full min-h-[450px] justify-between outline-none hover:outline-primary hover:outline-1 transition-all ease-in-out duration-700'>
         <figure class=''><img src={post.data.image} alt={`Imagen del post: ${post.data.title}`} class='h-[14rem] aspect-video'/></figure>
         <div class='card-body'>
           <div class='flex-col items-start justify-start gap-2 min-h-[120px]'>
