@@ -1,18 +1,11 @@
 ---
 import Layout from 'layout/Layout.astro'
 
-import html from '../svg/html5.svg'
-import css from '../svg/css.svg'
-import js from '../svg/javascript.svg'
-import react from '../svg/react.svg'
-import tailwind from '../svg/tailwind.svg'
-import bootstrap from '../svg/bootstrap.svg'
-import sass from '../svg/sass.svg'
-import astro from '../svg/astro.svg'
-import vscode from '../svg/vscode.svg'
-import git from '../svg/git.svg'
-import bash from '../svg/bash.svg'
-import linux from '../svg/linux.svg'
+import TechsIcons from '@components/about/TechsIcons.astro'
+
+const frontend = [ 'html5', 'css3', 'javascript', 'react', 'sass' ]
+const frameworks = [ 'tailwindcss', 'astro', 'bootstrap' ]
+const tools = [ 'visualstudiocode', 'git', 'gnubash', 'linux' ]
 
 const bornDate = new Date('1994-09-08')
 const ageDiff = Date.now() - bornDate.getTime()
@@ -45,24 +38,21 @@ const actualAge = Math.abs(ageDate.getUTCFullYear() - 1970)
             <div class='grid grid-cols-2 gap-12'>
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Frontend</h3>
                 <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
-                    <li class='btn btn-circle btn-sm'><img src={ html } alt='' class='w-6'></li>
-                    <li class='btn btn-circle btn-sm'><img src={ css } alt='' class='w-6'></li>
-                    <li class='btn btn-circle btn-sm'><img src={ js } alt='' class='w-6'></li>
-                    <li class='btn btn-circle btn-sm'><img src={ react } alt='' class='w-6'></li>
-                    <li class='btn btn-circle btn-sm'><img src={ bootstrap } alt='' class='w-6'></li>
-                    <li class='btn btn-circle btn-sm'><img src={ sass } alt='' class='w-6'></li>
+                    {frontend.map((item) => (
+                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} /></li>
+                    ))}
                 </ul>
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Frameworks</h3>
                 <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
-                    <li class='btn btn-circle btn-sm'><img src={ tailwind } alt='' class='w-6'></li>
-                    <li class='btn btn-circle btn-sm'><img src={ astro } alt='' class='w-6'></li>
+                    {frameworks.map((item) => (
+                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} /></li>
+                    ))}
                 </ul>
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Herramientas</h3>
                 <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
-                    <li class='btn btn-circle btn-sm'><img src={ bash } alt='' class='w-6'></li>
-                    <li class='btn btn-circle btn-sm'><img src={ git } alt='' class='w-6'></li>
-                    <li class='btn btn-circle btn-sm'><img src={ linux } alt='' class='w-6'></li>
-                    <li class='btn btn-circle btn-sm'><img src={ vscode } alt='' class='w-6'></li>
+                    {tools.map((item) => (
+                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} /></li>
+                    ))}
                 </ul>
             </div>
         </div>
