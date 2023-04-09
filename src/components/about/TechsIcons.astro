@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon'
 
-const { Tech } = Astro.props
+const { Tech, IconClass } = Astro.props
 ---
 
-<Icon pack='simple-icons' name={Tech} class='w-5' />
+<Icon pack='simple-icons' name={Tech} class={IconClass} />

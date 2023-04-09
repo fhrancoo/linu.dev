@@ -39,19 +39,19 @@ const actualAge = Math.abs(ageDate.getUTCFullYear() - 1970)
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Frontend</h3>
                 <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
                     {frontend.map((item) => (
-                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} /></li>
+                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} IconClass='w-5' /></li>
                     ))}
                 </ul>
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Frameworks</h3>
                 <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
                     {frameworks.map((item) => (
-                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} /></li>
+                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} IconClass='w-5' /></li>
                     ))}
                 </ul>
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Herramientas</h3>
                 <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
                     {tools.map((item) => (
-                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} /></li>
+                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} IconClass='w-5' /></li>
                     ))}
                 </ul>
             </div>
