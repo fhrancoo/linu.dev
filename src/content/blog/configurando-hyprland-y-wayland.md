@@ -1,7 +1,6 @@
 ---
 title: "Instalando y configurando Hyprland + Wayland Tips"
 description: "Como configurar hyprland y tener el mejor desktop!"
-image: "/img_blog/hyprland.webp"
 tags: [Linux]
 keywords: "linux desktop hyprland wayland hypr archlinux ubuntu nix nixos starship dotfiles dots enviroment window manager wm artix config configuration settings set up setup fedora debian zsh bash"
 publishDate: 2023-01-21

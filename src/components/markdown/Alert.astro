@@ -4,16 +4,18 @@ import Info from './svgIcons/Info.astro';
 import Warning from './svgIcons/Warning.astro';
 import Error from './svgIcons/Error.astro';
 
-const { Message, AlertType } = Astro.props
+const { AlertType } = Astro.props
 
 ---
-<div class={`alert alert-${AlertType} shadow-lg`}>
+<div class={`alert alert-${AlertType} shadow-lg py-0`}>
   <div>
     {AlertType === 'success' && <Success />}
     {AlertType === 'info' && <Info />}
     {AlertType === 'warning' && <Warning />}
     {AlertType === 'error' && <Error />}
-    <span class='text-sm font-medium text-gray-900'>{Message}</span>
+    <span class='text-sm font-medium text-gray-900'>
+      <slot />
+    </span>
   </div>
 </div>
 

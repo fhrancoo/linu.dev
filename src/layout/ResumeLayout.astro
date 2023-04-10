@@ -1,8 +1,5 @@
 ---
 import Head from '@components/Head.astro'
-import Header from '@components/Header.astro'
-import Footer from '@components/Footer.astro'
-import Menu from '@components/Menu.astro'
 import MenuButton from '@components/MenuButton.astro'
 ---
 
@@ -15,7 +12,9 @@ import MenuButton from '@components/MenuButton.astro'
 		<!-- <Menu />	 -->
 		<MenuButton />
 		<!-- <Header /> -->
-		<slot />
+    <div class=''>
+		  <slot />
+    </div>
 		<!-- <Footer /> -->
 		<script is:inline>
 			// ☝️ This script prevent the FART effect.

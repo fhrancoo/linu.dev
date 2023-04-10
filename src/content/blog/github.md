@@ -1,7 +1,6 @@
 ---
 title: "Github"
 description: "Conociendo Github, sus herramientas y utilidades"
-image: "/img_blog/github.webp"
 tags: [Skills, Git]
 keywords: "github git ssh readme shields badge https errors"
 publishDate: 2022-08-16

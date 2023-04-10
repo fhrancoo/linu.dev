@@ -6,21 +6,22 @@ publishDate: 2022-05-06
 keywords: "find with command line in linux ubuntu archlinux elementary os distro distribution files trash owner screen shot screenshot windows partition resize disk drive turn off minimize wm manager kill process .bin .run install shrink disk ipconfig thunar file shortcut hotkey keybind $PATH vim neovim nvim folder mount iso disk extract rsync ssh youtube-dl mp3"
 ---
 
-<div class="alert alert-success shadow-lg">
-  <div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-    <span>Esta nota se mantendrá actualizada.</span>
-  </div>
-</div>
+import Alert from '../../components/markdown/Alert.astro'
+import Note from '../../components/markdown/Note.astro'
+import Kbd from '../../components/markdown/Kbd.astro'
+import Hidebox from '../../components/markdown/Hidebox.astro'
+
+<Alert AlertType="success">
+Esta nota se mantendrá actualizada.
+</Alert>
 
 Tips / Instalación / **Archlinux**
 
-👉 **Nota 1:** No es exactamente un tutorial de instalación. Sino más bien mis notas.
+<Note Message="No es exactamente un tutorial de instalación. Sino más bien mis notas." />
 
-👉 **Nota 2:** Te recomiendo, siempre, guiarte con la wiki de Archlinux.
+<Note Message="Te recomiendo, siempre, guiarte con la wiki de Archlinux." />
 
-## ISO
-
+## ISOS
 
 🔅 Primero descargamos la ISO oficial de [Aquí](https://archlinux.org/download)
 
@@ -36,7 +37,7 @@ Si estamos utilizando __Windows__ podemos recurrir a [Rufus](https://rufus.ie)
 
 ## Iniciamos el USB e instalamos la BASE
 
-🔅 Siguiendo, tenemos que reiniciar en el usb. Normalmente con <kbd>F2</kbd> o <kbd>Supr</kbd> deberíamos poder ingresar al bios y seleccionar el USB.
+🔅 Siguiendo, tenemos que reiniciar en el usb. Normalmente con <Kbd>F2</Kbd> o <Kbd>Supr</Kbd> deberíamos poder ingresar al bios y seleccionar el USB.
 
 🔅 Booteamos Archlinux y seguimos
 
@@ -53,8 +54,8 @@ ParallelDownloads = 5
 ~~~
 
 🔅 Guardamos con: 
- - <kbd>Ctrl</kbd> + <kbd>o</kbd>
- - <kbd>Ctrl</kbd> + <kbd>x</kbd>
+<Kbd>Ctrl</Kbd> + <Kbd>o</Kbd> &
+<Kbd>Ctrl</Kbd> + <Kbd>x</Kbd>
 
 🔅 Actualizamos los repositorios
 
@@ -64,16 +65,11 @@ pacman -Syy
 
 🔅 Las particiones:
 
+<Alert AlertType='error'>
+**ATENCION**: En mi caso, yo mantengo el disco sin dual boot, solo tengo un Sistema operativo y es Archlinux/Artix. Pero voy a enseñar el método que uso si necesito dejar Windows (¡por alguna razón!)
+</Alert>
 
-<div class="alert alert-error shadow-lg">
-  <div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-    <span><strong>Atención </strong>En mi caso, yo mantengo el disco sin dual boot, solo tengo un Sistema operativo y es Archlinux/Artix. Pero voy a enseñar el método que uso si necesito dejar Windows (¡por alguna razón!)</span>
-  </div>
-</div>
-
-::: hsbox Hide / Show box inside
-
+<Hidebox>
 ~~~ bash
 # con fdisk compruebo el nombre de las particiones.
 fdisk -l
@@ -98,7 +94,8 @@ rm -rf EFI/arch/
 _Dejando la carpeta EFI/Microsoft sin tocar_
 
 🔅 Luego formateo la partición donde irá la raíz `mkfs.btrfs -F /dev/nvme0n1p5/` y continúo con la instalación.
-:::
+
+</Hidebox>
 
 
 🔅 Particionamos el disco:
@@ -264,16 +261,11 @@ umount -R /mnt          # Para desmontar
 reboot                  # Para reiniciar
 ~~~
 
+<Alert AlertType='info'>
+Llegado a este punto en el que reiniciaste y no te apareció ningún error o inconveniente, quiere decir que ya terminaste de instalar la base del sistema Archlinux.
 
-<div class="alert alert-info shadow-lg">
-  <div>
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-    <div class='flex flex-col gap-2'>
-      <span>Llegado a este punto en el que reiniciaste y no te apareció ningún error o inconveniente, quiere decir que ya terminaste de instalar la base del sistema __Archlinux__.</span>
-      <span>Me gustaría dejarte unos pasos más (consejos) a seguir que me sirvieron cuando no entendía nada.</span>
-    </div>
-  </div>
-</div>
+Me gustaría dejarte unos pasos más (consejos) a seguir que me sirvieron cuando no entendía nada. 
+</Alert>
 
 🔅 Habilitar DHCPCD para tener internet:
 
@@ -308,9 +300,7 @@ paru -S xf86-video-amdgpu vulkan-radeon mesa-libgl mesa-vdpau libvdpau-va-gl lib
 paru -S xf86-video-intel mesa-libgl libvdpau-va-gl #Intel
 ~~~
 
-<div class="alert alert-success shadow-lg">
-  <div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-    <span>Bueno, eso es todo. Espero que te haya servido. Si llegaste hasta acá te pido que revises mis otras notas!</span>
-  </div>
-</div>
+<Alert AlertType='success'>
+Bueno, eso es todo. Espero que te haya servido. Si llegaste hasta acá, te pido que revises mis otros posts.
+</Alert>
+

@@ -1,6 +1,7 @@
 ---
 title: "Archlinux w/ Astro"
 techs: ["Astro", "TailwindCSS", "JavaScript"]
+url: 'https://archlinux-astro.vercel.app/'
 description: "Rediseño de la web oficial de Archlinux.org, con un estilo minimalista y actualizado, creado con las mejores prácticas de desarrollo y un rendimiento de 100%."
 created: 2021-03-21
 ---

@@ -1,0 +1,11 @@
+---
+const { Message } = Astro.props
+import Info from './svgIcons/Info.astro';
+---
+
+<div class="alert shadow-lg my-6">
+  <div>
+    <Info />
+    <span>{Message}</span>
+  </div>
+</div>
