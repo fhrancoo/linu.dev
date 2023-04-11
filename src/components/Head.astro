@@ -1,5 +1,23 @@
 ---
 const { title = 'LNXMBL', description = 'Bienvenido a casa <3', image = '/lnxmbl.svg' } = Astro.props
+
+import { SITE } from '@services/config'
+
+export interface Props {
+  title?: string;
+  author?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  ogImage = SITE.ogImage,
+} = Astro.props;
+
+const socialImageURL = new URL(
+  ogImage ? ogImage : SITE.ogImage,
+  Astro.url.origin
+).href;
 ---
 
 <head>
@@ -24,7 +42,7 @@ const { title = 'LNXMBL', description = 'Bienvenido a casa <3', image = '/lnxmbl
 	<meta property='og:type' content='website' />
 	<meta property='og:title' content={title} />
 	<meta property='og:description' content={description} />
-	<meta property='og:image' content={image} />
+	<meta property='og:image' content={socialImageURL} />
 	<link rel='canonical' href='https://linu.dev/' />
 
 	<meta name='twitter:card' content='summary_large_image' />
