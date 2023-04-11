@@ -1,5 +1,5 @@
 import satori, { SatoriOptions } from 'satori'
-import { SITE } from './config.ts'
+import { SITE } from '@services/config'
 
 const fetchFonts = async () => {
 	// Regular Font
