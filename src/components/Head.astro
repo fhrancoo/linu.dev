@@ -1,25 +1,5 @@
 ---
 const { title = 'LNXMBL', description = 'Bienvenido a casa <3', image = '/lnxmbl.svg' } = Astro.props
-
-import { SITE } from '@services/config'
-
-export interface Props {
-  title?: string;
-  author?: string;
-  description?: string;
-  ogImage?: string;
-}
-
-const {
-  ogImage = SITE.ogImage,
-} = Astro.props;
-
-const socialImageURL = new URL(
-  ogImage ? ogImage : SITE.ogImage,
-  Astro.url.origin
-).href;
-
-const postTitleHere = "Test post title HEre"
 ---
 
 <head>
@@ -44,11 +24,7 @@ const postTitleHere = "Test post title HEre"
 	<meta property='og:type' content='website' />
 	<meta property='og:title' content={title} />
 	<meta property='og:description' content={description} />
-<!--	<meta property='og:image' content={socialImageURL} /> -->
-  <meta property="og:image" content={`${postTitleHere}`.svg} />
-<!-- Optional: Set the width and height of the OG image -->
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+	<meta property='og:image' content={image} />
 	<link rel='canonical' href='https://linu.dev/' />
 
 	<meta name='twitter:card' content='summary_large_image' />
