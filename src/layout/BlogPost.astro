@@ -8,7 +8,7 @@ const { title, publishDate, updatedDate, tags } = Astro.props
 
 ---
 <div class='flex items-center justify-center w-full h-full px-6 md:px-24 mb-16 relative'>
-  <TwitterShare Url={Astro.request.url} Title={title} />
+  <TwitterShare Url={Astro.url} Title={title} />
   <div class="text-sm breadcrumbs">
     <ul>
       <li><a href='/' class='underline underline-offset-2 text-primary hover:text-accent transition-all ease-in-out duration-500'>Inicio</a></li>
