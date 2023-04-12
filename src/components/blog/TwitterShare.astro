@@ -1,0 +1,13 @@
+---
+import { Icon } from 'astro-icon'
+const { Url, Title } = Astro.props
+---
+
+<div class='w-full h-full flex items-end justify-center fixed bottom-6'>
+  <a href=`'https://twitter.com/share/?url=${Url}&text="${Title}" por @linuxmobile'` target='_blank' rel='nofollow noopener'
+  class='bg-white py-2 px-4 rounded-3xl flex items-center justify-center gap-2 transition-all ease-in-out duration-700 hover:bg-blue-200' style='box-shadow: rgba(100,110,140,.4)0 6px 21px 2px;'
+  >
+    <Icon pack='logos' name='twitter' class='w-6 inline' />
+    <span class='text-sm text-gray-950 font-mona-sans font-semibold'>Comparte el Artículo</span>
+  </a>
+</div>
