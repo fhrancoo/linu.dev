@@ -1,5 +1,13 @@
 ---
-const { title = 'LNXMBL', description = 'Bienvenido a casa <3', image = '/lnxmbl.svg' } = Astro.props
+interface Props {
+  title?: string
+  description?: string
+  image?: string
+  frontmatter?: {
+    title?: string
+  }
+}
+const { title = 'LNXMBL', description = 'Bienvenido a casa <3', image = '/lnxmbl.svg', frontmatter } = Astro.props
 ---
 
 <head>
@@ -24,7 +32,13 @@ const { title = 'LNXMBL', description = 'Bienvenido a casa <3', image = '/lnxmbl
 	<meta property='og:type' content='website' />
 	<meta property='og:title' content={title} />
 	<meta property='og:description' content={description} />
-	<meta property='og:image' content={image} />
+	<!-- <meta property='og:image' content={image} /> -->
+  <meta
+      content={frontmatter?.title
+        ? `https://og-nine-flame.vercel.app/api/og?title=${frontmatter.title}`
+        : 'https://res.cloudinary.com/dzrea5zhv/image/upload/v1583171588/me_qvrwky.jpg'}
+      property="og:image"
+    />
 	<link rel='canonical' href='https://linu.dev/' />
 
 	<meta name='twitter:card' content='summary_large_image' />
