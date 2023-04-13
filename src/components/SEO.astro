@@ -69,7 +69,7 @@ const ensureTrailingSlash = (url: string | URL) => url.toString().replace(/\/$/,
 <meta property="og:locale" content={og.locale} />
 <meta property="og:description" content={og.description} />
 <meta property="og:site_name" content={og.name} />
-{og.image && <meta property="og:image" content={og.image.src} />}
+{og.image && <meta property="og:image" content=`https://og-nine-flame.vercel.app/api/og?title=${og.description}` />}
 {og.image && <meta property="og:image:alt" content={og.image.alt} />}
 
 <!-- Twitter Tags -->

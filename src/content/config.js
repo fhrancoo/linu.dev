@@ -12,6 +12,8 @@ const blog = defineCollection({
 		) => (str ? new Date(str) : undefined)),
 		keywords: z.string().optional(),
 		isDraft: z.boolean().optional(),
+		socialImage: z.string().optional(),
+		coverImage: z.string().optional(),
 	}),
 })
 const projects = defineCollection({
