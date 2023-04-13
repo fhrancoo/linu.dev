@@ -22,7 +22,7 @@ const siteInfo: SiteInfo = {
 	name: "LinuDev",
 	title: "LinuDev",
 	description:
-		"Soy un programador apasionado por el diseño innovador y de vanguardia. Mi objetivo es crear experiencias únicas y memorables que hagan que tus usuarios se enamoren de tu sitio web.",
+		"Diseñando la web del futuro hoy",
 	image: {
 		src: "/og/social.jpg",
 		alt: "Diseñando la web del futuro hoy",
