@@ -41,6 +41,7 @@
     "sass": "^1.61.0",
     "satori": "^0.4.7",
     "satori-html": "^0.3.2",
+    "smartypants": "^0.1.6",
     "standard": "^17.0.0",
     "typescript": "5.0.3"
   },

@@ -4,7 +4,7 @@ import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://linu.dev/',
+	site: 'https://linu.dev',
 	integrations: [tailwind(), mdx()],
 	markdown: {
 		shikiConfig: {
@@ -16,4 +16,9 @@ export default defineConfig({
 			wrap: true,
 		},
 	},
+	vite: {
+		ssr: {
+			noExternal: ['smartypants'],
+		}
+	}
 })
