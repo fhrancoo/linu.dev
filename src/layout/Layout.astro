@@ -5,13 +5,38 @@ import Footer from '@components/Footer.astro'
 import Menu from '@components/Menu.astro'
 import MenuButton from '@components/MenuButton.astro'
 
+interface Props {
+	title: string;
+	description: string;
+	ogImage?: {
+		src: string;
+		alt: string;
+	};
+	publishDate?: Date;
+}
+
+const {
+	title,
+	description,
+	ogImage = {
+		src: '/assets/og-image.png',
+		alt: 'Astro',
+	},
+	publishDate = new Date(),
+} = Astro.props
+
 ---
 
 <!DOCTYPE html>
 <html
 	lang='en'
 	class='scrollbar-thin scrollbar-thumb-accent scrollbar-track-base-100 scrollbar-thumb-rounded-md scroll-smooth overflow-x-hidden'>
-	<Head />
+	<Head 
+		title={title}
+		description={description}
+		ogImage={ogImage}
+		publishDate={publishDate}
+	/>
 	<body>
 		<Menu />	
 		<MenuButton />
