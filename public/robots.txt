@@ -1,0 +1,7 @@
+User-agent: Googlebot-Image
+Disallow: /_astro/
+
+User-Agent: *
+Allow: /
+
+Sitemap: https://linu.dev/sitemap-index.xml
