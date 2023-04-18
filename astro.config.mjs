@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 import mdx from '@astrojs/mdx'
+import fs from 'node:fs'
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,6 +20,26 @@ export default defineConfig({
 	vite: {
 		ssr: {
 			noExternal: ['smartypants'],
-		}
-	}
+		},
+		plugins: [rawFonts(['.ttf', '.woff'])],
+		optimizeDeps: {
+			exclude: ['@resvg/resvg-js'],
+		},
+	},
 })
+
+// vite plugin to import fonts
+function rawFonts(ext) {
+	return {
+		name: 'vite-plugin-raw-fonts',
+		transform(_, id) {
+			if (ext.some((e) => id.endsWith(e))) {
+				const buffer = fs.readFileSync(id)
+				return {
+					code: `export default ${JSON.stringify(buffer)}`,
+					map: null,
+				}
+			}
+		},
+	}
+}

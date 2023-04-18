@@ -1,32 +1,39 @@
 ---
-import smartypants from 'smartypants'
-import siteInfo from '../data/site-info'
-import SEO from './SEO.astro'
-// const { title = 'LNXMBL', description = 'Bienvenido a casa <3', image = '/lnxmbl.svg' } = Astro.props
-
-export type Props = {
-	title?: string
-	description?: string
-	image?: { src: string; alt: string } 
-	canonicalURL?: URL | null
-	pageType?: 'website' | 'article'
+interface Props {
+	author?: string;
+	twitter?: string;
+  title?: string;
+  description?: string;
+  ogImage?: {
+    src: string;
+    alt: string;
+  };
+  publishDate?: Date;
 }
+
+const defaultMeta = {
+	author: "linuxmobile",
+	twitter: "@linuxmobileok",
+  title: "LinuDev",
+  description:
+    "Welcome to my personal website! I am a software engineering student. I'm passionate about building software that helps developers to be more productive",
+  ogImage: {
+    src: "/static/banner.png",
+    alt: "Photo of the author smiling",
+  },
+};
 
 const {
-	description = siteInfo.description,
-	image = siteInfo.image,
-	canonicalURL = new URL(Astro.request.url, Astro.site),
-	pageType = 'website',
-} = Astro.props as Props
+	author = defaultMeta.author,
+	twitter = defaultMeta.twitter,
+  title = defaultMeta.title,
+  description = defaultMeta.description,
+  ogImage = defaultMeta.ogImage,
+  publishDate = "",
+} = Astro.props;
 
-const twitterHandle = "linuxmobileok"
-
-const title = [Astro.props.title, siteInfo.title].filter(Boolean).join(' | ')
-const resolvedImage = {
-	src: new URL(image.src, Astro.site).toString(),
-	alt: image.alt,
-}
-
+const ogImageURL = new URL(ogImage.src, Astro.site).href;
+const canonicalURL = new URL(Astro.url).href;
 ---
 
 <head>
@@ -34,21 +41,39 @@ const resolvedImage = {
 	<meta name='generator' content={Astro.generator} />
 	<meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
 	<meta name='theme-color' content='#151618' />
-	
-	<title set:html={smartypants(title, 1)}></title>
 
+  <title>{title}</title>
+  <link rel="canonical" href={canonicalURL} />
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImageURL} />
+  <meta property="og:site_name" content={author} />
+  <meta property="og:image:alt" content={ogImage.alt} />
+  <meta property="og:locale" content="en_US" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={canonicalURL} />
+  <meta name="twitter:site" content={twitter} />
+  <meta name="twitter:creator" content={twitter} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={ogImageURL} />
+  <meta name="robots" content="follow, index" />
+  <meta name="author" content={author} />
+  {
+    publishDate && (
+      <meta
+        property="article:published_time"
+        content={publishDate.toISOString()}
+      />
+    )
+  }
+	
 	<link rel='icon' href='/favicon.svg' type='image/svg+xml' />
 	<link rel='mask-icon' href='/mask-icon.svg' color='#000000' />
-
-	<SEO 
-		name={siteInfo.name}
-		title={title}
-		description={description}
-		image={resolvedImage}
-		twitter={{ handle: twitterHandle }}
-		og={{ type: pageType }}
-		canonicalURL={canonicalURL}
-	/>
 
 	<link rel='preload' href='/Mona-Sans.woff2' as='font' type='font/woff2' crossorigin />
 	<link rel='preload' href='/Hubot-Sans.woff2' as='font' type='font/woff2' crossorigin />

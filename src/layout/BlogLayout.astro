@@ -1,0 +1,98 @@
+---
+import Layout from './Layout.astro'
+import Pagination from '@components/blog/Pagination.astro'
+import TwitterShare from '@components/blog/TwitterShare.astro'
+import Utterance from '@components/Utterance.astro'
+
+interface Props {
+	title: string;
+	description: string;
+	image: {
+		src: string;
+		alt: string;
+	};
+	publishDate: Date;
+	url: string;
+	updatedDate?: Date;
+	tags: string[];
+}
+
+const {
+	title,
+	description,
+	image,
+	publishDate,
+	url,
+	updatedDate,
+	tags
+} = Astro.props
+
+const ogImage = {
+	src: `/image/${url}.png`,
+	alt: title,
+}
+
+const fullPubDate = publishDate.toLocaleDateString('es', {
+  dateStyle: 'full',
+});
+
+const fullUpdatedDate = updatedDate?.toLocaleDateString('es', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+})
+---
+<Layout
+	title={title}
+	description={description}
+	image={ogImage}
+	publishDate={updatedDate || publishDate}
+>
+	<div class='flex items-center justify-center w-full h-full px-6 md:px-'4 mb-16 relative'>
+  <TwitterShare Url={Astro.url} Title={title} />
+  	<div class="text-sm breadcrumbs">
+    	<ul>
+      	<li><a href='/' class='underline underline-offset-' text-primary hover:text-accent transition-all ease-in-out duration-500'>Inicio</a></li>
+      	<li><a href='/blog' class='underline underline-offset-2 text-primary hover:text-accent transition-all ease-in-out duration-500'>Blog</a></li> 
+      	<li class='text-accent'>{title}</li>
+    	</ul>
+  	</div>
+	</div>
+	<div class='flex flex-col items-center justify-center px-10 lg:px-60 font-mona-sans'>
+		<h1 class='title [font-stretch:ultra-expanded]  font-black text-xl sm:text-2xl md:text-5xl lg:text-7xl'>{title}</h1>
+  	<div class='flex items-center justify-between w-full'>
+    	<div class='flex items-start justify-start gap-x-2 my-5 md:my-9 font-mona-sans'>
+	    	{tags && tags.map((tag) => <span class='badge badge-outline badge-lg'>{tag}</span>)}
+    	</div>
+	  	<div class='text-sm'>
+		  	{
+			  	publishDate && (
+				  	<time datetime={publishDate.toISOString()} class='mb-2 text-neutral-content text-opacity-60'>
+					  	{fullPubDate}
+				  	</time>
+			  	)
+		  	}
+		  	{
+			  	updatedDate && (
+				  	<div class='mt-2'>
+					  	Última Actualización{' '}
+					  	<time>
+						  	{fullUpdatedDate}
+					  	</time>
+				  	</div>
+			  	)
+		 		}
+	  	</div>
+  	</div>
+	</div>
+	<div class='divider px-10 lg:px-60'></div>
+	<main class='flex flex-col items-center justify-center w-full font-mona-sans px-1'>
+		<article 
+			class='prose-sm md:prose-lg px-10 lg:px-60 prose-img:rounded-xl prose-headings:font-mona-sans prose-headings:[font-stretch:ultra-expanded] prose-h2:font-bold prose-h3:font-medium prose-p:font-mona-sans prose-a:font-bold mt-8'>
+			<slot />
+			<Utterance />
+		</article>
+		<Pagination />
+	</main>
+</Layout>
+

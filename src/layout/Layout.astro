@@ -1,21 +1,17 @@
 ---
-import Head, { type Props as HeadProps} from '@components/Head.astro'
+import Head from '@components/Head.astro'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
 import Menu from '@components/Menu.astro'
 import MenuButton from '@components/MenuButton.astro'
 
-export type Props = HeadProps
-const { ...head } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html
 	lang='en'
 	class='scrollbar-thin scrollbar-thumb-accent scrollbar-track-base-100 scrollbar-thumb-rounded-md scroll-smooth overflow-x-hidden'>
-	<head>
-		<Head {...head} />
-	<head />
+	<Head />
 	<body>
 		<Menu />	
 		<MenuButton />
