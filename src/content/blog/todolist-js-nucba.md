@@ -1,8 +1,7 @@
 ---
-title: "Creando un todolist con javascript, en nucba"
-description: "Creando un ToDo List con Javascript. Tarea de NUCBA."
-tags: [Frontend]
-keywords: "first project todolist todo list to do nucba nucbantastico javascript js jquery const var let "
+title: "Domina JavaScript con este Todolist"
+description: "Descubre cómo crear un Todolist con JavaScript y HTML. Una guía práctica con consejos útiles para principiantes."
+tags: [javascript]
 publishDate: 2022-10-19
 ---
 

@@ -1,9 +1,8 @@
 ---
-title: "Opinión sobre NUCBA (plataforma de aprendizaje online)"
-description: "Nucba más busques un bootcamp. Mi opinión personal sobre NUCBA."
-tags: [Web Dev]
+title: "Mi experiencia en NUCBA: una opinión personal (Parte 1)"
+description: "Descubre mi honesta opinión sobre el bootcamp de programación NUCBA en la primera parte de esta serie de dos. ¡No te pierdas mis pensamientos!"
+tags: [devdotto]
 publishDate: 2022-09-04
-keywords: "Fullstack bootcamp fullstack carrera online argentina programación reddit comentario opinion personal aprender on line en linea universitario ingenieria sistemas programar programando instituto donde conocer mejor opcion opciones coderhouse soyhenry platzi UTN universidades"
 ---
 
 👉 Nota: Web de [NUCBA](https://nucba.com.ar/).

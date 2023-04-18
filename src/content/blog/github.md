@@ -1,7 +1,7 @@
 ---
-title: "Github"
-description: "Conociendo Github, sus herramientas y utilidades"
-tags: [Skills, Git]
+title: "Guía para principiantes de Git: tips de configuración y más"
+description: "Descubre cómo configurar Git de forma efectiva para aprovechar al máximo sus funcionalidades y simplificar tu flujo de trabajo en el desarrollo de proyectos."
+tags: [git]
 keywords: "github git ssh readme shields badge https errors"
 publishDate: 2022-08-16
 ---

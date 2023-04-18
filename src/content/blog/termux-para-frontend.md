@@ -1,8 +1,8 @@
 ---
-title: "Configurando Termux para programar"
-tags: [Skills, Shell, Android]
+title: "Guía para programar en Android con Termux"
+description: "Aprende cómo configurar Termux en Android para programar como un profesional. Descubre configuraciones sorprendentes para desarrolladores en esta guía completa."
+tags: [android]
 publishDate: 2022-06-24
-keywords: "android termux linux arch artix configurando configurar setup programar programming hub fullstack developer learning how to ide IDE myTermux ohmyzsh zsh bat cat cava ncmpcpp mpd mpc mpv firefox develop developing programando tablet samsung xiaomi tab galaxy"
 ---
 
 Tips / Instalación / Termux

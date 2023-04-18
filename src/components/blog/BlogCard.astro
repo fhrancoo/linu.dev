@@ -1,26 +1,28 @@
 ---
+import BlogTag from './BlogTag.astro'
 interface Props {
   title: string;
   description: string;
   publishDate: Date;
   url: string;
+	tags: string[];
 }
 
-const { title, description, publishDate, url } = Astro.props;
+const { title, description, publishDate, url, tags } = Astro.props;
 const fullDate = publishDate.toLocaleDateString('es', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 })
 ---
-<li class="grid grid-cols-1 gap-2 sm:grid-cols-4 text-">
+<li class="grid grid-cols-1 gap-2 sm:grid-cols-4 h-40 text-primary font-mona-sans">
   <time
     datetime={publishDate.toISOString()}
     class="hidden sm:block text-sm tracking-wide text-accent mt-6 sm:ml-6"
     >{fullDate}
   </time>
   <a
-    class="col-span-3 flex flex-col gap-2 bg-neutral sm:gap-4 sm:p-5 sm:hover:bg-base-300 transition-colors rounded-lg"
+    class="col-span-3 flex flex-col gap-2 bg-neutral sm:gap-4 sm:p-5 sm:hover:bg-base-300 transition-colors rounded-lg relative overflow-hidden"
     href={url}
   >
     <time
@@ -31,6 +33,7 @@ const fullDate = publishDate.toLocaleDateString('es', {
     <h2 class="text-lg font-semibold text-primary">
       {title}
     </h2>
-    <p class="leading-relaxed max-w-prose">{description}</p>
+    <p class="leading-relaxed max-w-prose text-primary/50">{description}</p>
+		<BlogTag Tag={tags}/>
   </a>
 </li>

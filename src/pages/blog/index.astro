@@ -7,7 +7,7 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 )
 
-const title = "Blog | LinuDev";
+const title = "Blog | LinuDev"
 const description =
   "My personal collection of code snippets, starter guides, tutorials and interesting things I found online."
 ---
@@ -20,8 +20,8 @@ const description =
       </ul>
     </div>
   </div>
-  <h2 class='flex items-center justify-center w-full font-mona-sans [font-stretch:ultra-expanded] text-2xl sm:text-3xl md:text-4xl lg:text-6xl py-8 font-black'>Todos los artículos</h2>
-  <div class='divider px-24'></div>
+  <h2 class='flex items-center justify-center w-full font-mona-sans [font-stretch:ultra-expanded] text-2xl sm:text-3xl md:text-4xl lg:text-6xl pt-10 font-black'>Todos los artículos</h2>
+	<p class='flex items-center justify-center w-full font-mona-sans text-lg pt-4 pb-10 font-medium text-primary/60'>{description}</p>
 	<ul class='flex flex-col gap-8 sm:border-l sm:border-neutral max-w-3xl mx-auto'>
 		{
 			posts.map((post) => (
@@ -30,6 +30,7 @@ const description =
 					publishDate={post.data.publishDate}
 					description={post.data.description}
 					url={`/blog/${post.slug}`}
+					tags={post.data.tags}
 				/>
 			))
 		}

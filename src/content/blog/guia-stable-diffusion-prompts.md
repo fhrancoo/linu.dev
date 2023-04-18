@@ -1,9 +1,8 @@
 ---
-title: "La mejor guía para utilizar Stable Diffusion"
-description: "Entiende como funcionan los prompts de Stable Diffusion, y se un crack de la Inteligencia Artificial."
-tags: [IA, Skills]
+title: "Guía avanzada de prompts en Stable Diffusion"
+description: "Descubre cómo utilizar los prompts avanzados en Stable Diffusion para crear imágenes sorprendentes con esta guía completa y trucos útiles."
+tags: [openai]
 publishDate: 2022-12-20
-keywords: "IA inteligencia artificial crack entender resolver prompt prompts stable diffusion IASD SD dall-e dalle midjourney openjourney artificial intelligence "
 ---
 
 ## Intro

@@ -1,8 +1,8 @@
 ---
-title: "NodeJS en Termux (y sus problemas)"
-tags: [Skills, Shell, Android]
+title: "Instalación de Node.js en Termux: Consejos y soluciones"
+description: "Aprende a configurar Node.js en la app de Android Termux y soluciona los problemas más comunes para instalar paquetes."
+tags: [nodedotjs]
 publishDate: 2022-06-25
-keywords: "android termux linux arch artix configurando configurar setup programar programming hub fullstack developer learning how to ide IDE myTermux ohmyzsh zsh bat cat cava ncmpcpp mpd mpc mpv firefox develop developing programando tablet samsung xiaomi tab galaxy nodejs npm nvm"
 ---
 
 ## Intentando utilizar NPM en android y todos sus problemas!

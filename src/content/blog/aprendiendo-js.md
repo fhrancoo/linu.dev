@@ -1,8 +1,8 @@
 ---
-title: "Aprendiendo Javascript desde Cero | NUCBA"
-tags: [Web Dev, Javascript, Frontend]
+title: "De principiante a fullstack en Nucba: mi experiencia"
+tags: [javascript]
 publishDate: 2022-10-13
-keywords: "javascript learning aprendiendo desde cero js jscript typerscript react frontend learn web developer desarrollador desarrollo programador programar aprender reactjs tsx noob nuevo"
+description: "Descubre cómo pasé de principiante a programador fullstack en el bootcamp de programación Nucba con mi experiencia personal en la enseñanza de JavaScript."
 ---
 
 Tips / Consejos / Javascript
