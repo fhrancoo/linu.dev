@@ -1,11 +1,12 @@
 ---
-const { Message } = Astro.props
 import Info from './svgIcons/Info.astro';
 ---
 
 <div class="alert shadow-lg my-6">
   <div>
     <Info />
-    <span>{Message}</span>
+    <span class='text-sm font-medium text-primary'>
+      <slot />
+    </span>
   </div>
 </div>
