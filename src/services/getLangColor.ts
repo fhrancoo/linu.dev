@@ -1,6 +1,7 @@
 const langColors = {
 	Mercury: '#ff2b2b',
 	Astro: '#FF5A03',
+	ReactJS: '#149ECA',
 	TypeScript: '#2b7489',
 	PureBasic: '#5a6986',
 	'Objective-C++': '#6866fb',
