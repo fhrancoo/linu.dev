@@ -1,6 +1,10 @@
 import rss from '@astrojs/rss'
+import sanitizeHtml from 'sanitize-html'
+import MarkdownIt from 'markdown-it'
 import type { APIRoute } from 'astro'
 import { CollectionEntry, getCollection } from 'astro:content'
+
+const parser = new MarkdownIt()
 
 function sortPosts(a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) {
 	return Number(b.data.publishDate) - Number(a.data.publishDate)
@@ -27,6 +31,7 @@ export const get: APIRoute = async (context) => {
 			title: item.data.title,
 			description: item.data.description,
 			link: `/blog/${item.slug}/`,
+			content: sanitizeHtml(parser.render(item.body)),
 			pubDate: formatDate(item.data.publishDate),
 		})),
 	})
