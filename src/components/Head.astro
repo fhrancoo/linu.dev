@@ -37,6 +37,15 @@ const canonicalURL = new URL(Astro.url).href;
 ---
 
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EHKQRZNYPJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EHKQRZNYPJ');
+</script>
 	<link rel='sitemap' href='/sitemap-index.xml'>
 	<meta charset='utf-8' />
 	<meta name='generator' content={Astro.generator} />
