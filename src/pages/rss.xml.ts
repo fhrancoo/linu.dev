@@ -24,7 +24,7 @@ export const get: APIRoute = async (context) => {
 		title: 'LinuDev',
 		// See "Styling" section below
 		description: 'Diseñando la web del futuro hoy',
-		stylesheet: '/stylesheet.xsl',
+		// stylesheet: '/stylesheet.xsl',
 		site: context.site!.href,
 		// The list of items for your RSS feed, sorted.
 		items: posts.map((item) => ({
