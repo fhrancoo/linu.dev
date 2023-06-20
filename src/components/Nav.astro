@@ -1,0 +1,44 @@
+---
+import NavIcon from './NavIcon.astro'
+
+const links = [
+  {
+    href: '/',
+    text: 'Home',
+    icon: 'home-2-bold'
+  },
+  {
+    href: '/blog',
+    text: 'Blog',
+    icon: 'chat-square-like-bold'
+  },
+  {
+    href: '/projects',
+    text: 'Projects',
+    icon: 'programming-bold'
+  },
+  {
+    href: '/about',
+    text: 'About',
+    icon: 'user-circle-bold'
+  },
+  {
+    href: '#',
+    text: 'More',
+    icon: 'add-square-bold'
+  }
+]
+
+---
+<nav class='flex items-center justify-center w-full fixed top-6 z-20 transition-all ease-in-out duration-500'>
+  <div class='flex gap-10 bg-gray-950/40 py-2 px-4 rounded-3xl backdrop-blur-md ring-1 ring-gray-950/80 shadow-lg'>
+    {
+      links.map((link) => (
+        <a href={link.href} class='flex items-center justify-center text-center gap-2 hover:scale-110 transition-all ease-in-out duration-500'>
+          <NavIcon IconName={link.icon} />
+          <span class='font-semibold font-mona-sans text-sm'>{link.text}</a>
+        </a>
+      ))
+    }
+  </div>
+</nav>

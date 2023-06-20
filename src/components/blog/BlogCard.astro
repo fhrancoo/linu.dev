@@ -15,25 +15,25 @@ const fullDate = publishDate.toLocaleDateString('es', {
   day: 'numeric',
 })
 ---
-<li class="grid grid-cols-1 gap-2 sm:grid-cols-4 h-40 text-primary font-mona-sans">
+<li class="grid grid-cols-1 gap-2 sm:grid-cols-4 h-40 text-primary-content font-mona-sans">
   <time
     datetime={publishDate.toISOString()}
     class="hidden sm:block text-sm tracking-wide text-accent mt-6 sm:ml-6"
     >{fullDate}
   </time>
   <a
-    class="col-span-3 flex flex-col gap-2 bg-neutral sm:gap-4 sm:p-5 sm:hover:bg-base-300 transition-colors rounded-lg relative overflow-hidden"
+    class="col-span-3 flex flex-col gap-2 bg-primary/60 text-primary-content backdrop-blur-sm ring-2 ring-primary/90 sm:gap-4 sm:p-5 sm:hover:bg-primary-focus/60 hover:ring-primary-focus rounded-lg relative overflow-hidden transition-all ease-in-out duration-500"
     href={url}
   >
     <time
       datetime={publishDate.toISOString()}
-      class="block sm:hidden text-sm tracking-wide text-accent"
+      class="block sm:hidden text-sm tracking-wide"
       >{fullDate}
     </time>
-    <h2 class="text-lg font-semibold text-primary">
+    <h2 class="text-lg font-extrabold">
       {title}
     </h2>
-    <p class="leading-relaxed max-w-prose text-primary/50">{description}</p>
+    <p class="leading-relaxed max-w-prose text-primary-content/60 font-medium">{description}</p>
 		<BlogTag Tag={tags}/>
   </a>
 </li>

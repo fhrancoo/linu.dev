@@ -1,15 +1,13 @@
 ---
-
+import Nav from '@components/Nav.astro'
 ---
 
-<header class='flex my-10 w-full'>
+<header class='flex py-10 w-full'>
 	<div class='flex items-center justify-between sm:w-[75%] md:w-[85%] lg:w-[90%] px-4'>
-		<div class='w-full'>
-			<a href='/' class='text-2xl font-extralight font-mona-sans uppercase relative z-10 transition-all duration-300 ease-in-out hover:text-primary w-fit' id='logo'>LinuDev</a>
-		</div>
-      <a href='mailto:bdiez19@gmail.com' class='flex flex-col font-mona-sans [font-stretch:ultra-expanded] uppercase text-xs font-bold h-fit w-fit btn btn-outline btn-success'>
+    <Nav />
+      <!-- <a href='mailto:bdiez19@gmail.com' class='flex flex-col font-mona-sans [font-stretch:ultra-expanded] uppercase text-xs font-bold h-fit w-fit btn btn-outline btn-success'>
         <span>Actualmente disponible</span>
         <span>para contratar</span>
-      </a>
+      </a> -->
 	</div>
 </header>

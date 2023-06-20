@@ -1,4 +1,6 @@
 ---
+import BlogCard from '@components/blog/BlogCard.astro'
+
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection('blog')).sort(
@@ -6,8 +8,8 @@ const posts = (await getCollection('blog')).sort(
 )
 ---
 
-<section class='w-full h-full flex flex-col items-center justify-center my-8 px-6 md:px-48 mb-28'>
-  <h2 class='text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-mona-sans [font-stretch:ultra-expanded] font-bold w-full'>Últimas Publicaciones</h2>
+<section class='w-full h-full flex flex-col items-center justify-center my-8 pr-16 mb-28'>
+  <h2 class='text-6xl font-mona-sans [font-stretch:ultra-expanded] font-bold w-full'>Últimas Publicaciones</h2>
   <div class='divider'></div>
   {
   posts.slice(0, 3).map(post => (
