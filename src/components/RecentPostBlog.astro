@@ -1,5 +1,5 @@
 ---
-import BlogCard from '@components/blog/BlogCard.astro'
+import BlogCardIndex from '@components/blog/BlogCardIndex.astro'
 
 import { getCollection } from "astro:content";
 
@@ -13,12 +13,13 @@ const posts = (await getCollection('blog')).sort(
   <div class='divider'></div>
   {
   posts.slice(0, 3).map(post => (
-    <a href={`/blog/${post.slug}/`} class='flex flex-col items-start gap-10 justify-center w-full h-full'>
-      <article class='bg-neutral py-6 px-10 rounded-lg w-full my-3 font-mona-sans [font-stretch:ultra-expanded] text-primary shadow-none hover:shadow-primary/30 ease-in-out transition-all duration-700 hover:shadow-lg'>
-        <p class='text-2xl font-extrabold max-w-xl leading-none'>{post.data.title}</p>
-        <p class='text-primary/80 max-w-2xl pt-2'>{post.data.description}</p>
-      </article>
-    </a>
+		<BlogCardIndex
+		  title={post.data.title}
+			publishDate={post.data.publishDate}
+			description={post.data.description}
+			url={`/blog/${post.slug}`}
+			tags={post.data.tags}
+		/>
   ))
   }
   <div class='w-full flex items-end justify-end mt-8'>
