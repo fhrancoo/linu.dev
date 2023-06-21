@@ -10,18 +10,9 @@ import Contact from '@components/Contact.astro'
 
 <Layout>
 	<Hero />
-   <div class='relative flex'>
-    <div class='flex flex-col w-2/4 h-screen flex-0'>
-	    <About />
-    </div>
-    <div class='
-      flex flex-col flex-auto h-screen overflow-y-auto w-2/4
-      scrollbar-thin scrollbar-thumb-accent-focus
-      scrollbar-thumb-rounded-md scroll-smooth overflow-x-hidden'>
-	    <Projects />
-      <RecentPostBlog />
-    </div>
-  </div>
+	<About />
+	<Projects />
+  <RecentPostBlog />
 	<!-- <Repositories /> -->
 	<Contact />
 </Layout>
