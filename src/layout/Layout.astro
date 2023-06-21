@@ -4,7 +4,7 @@ import Head from '@components/Head.astro'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
 import Menu from '@components/Menu.astro'
-import MenuButton from '@components/MenuButton.astro'
+// import MenuButton from '@components/MenuButton.astro'
 
 interface Props {
 	title: string;
@@ -42,7 +42,7 @@ const {
     <Noise />
     <div class='relative z-20'>
 		  <Menu />	
-		  <MenuButton />
+		  <!-- <MenuButton /> -->
 		  <Header />
 		  <slot />
 		  <Footer />
@@ -56,8 +56,8 @@ const {
 			// The value is checked and applyed before rendering anything.
 		</script>
 		<script>
-			import { themeChange } from 'theme-change'
-			themeChange()
+			// import { themeChange } from 'theme-change'
+			// themeChange()
 			// 👆 you could import the CDN directly instead of these two lines
 		</script>
 	</body>
