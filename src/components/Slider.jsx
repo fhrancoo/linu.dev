@@ -12,7 +12,7 @@ export default function Slider() {
 		<Swiper>
 			{posts.slice(0, 3).map((post) => (
 				<SwiperSlide>
-					<article class='h-[calc(100vh-5rem)] bg-fixed bg-auto bg-center w-full text-secondary-content'
+					<article class='h-[calc(100vh-8rem)] bg-fixed bg-auto bg-center w-full text-secondary-content'
             style={{ backgroundImage: `url(${post.data.image})` }}
           >
 						<div class='backdrop-blur-sm backdrop-brightness-75 w-full h-full flex items-start justify-between flex-col'>
