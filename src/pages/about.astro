@@ -39,31 +39,31 @@ const actualAge = Math.abs(ageDate.getUTCFullYear() - 1970)
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Frontend</h3>
                 <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
                     {frontend.map((item) => (
-                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} IconClass='w-5' /></li>
+                      <li class='btn btn-circle btn-sm bg-grad-pink-brown'><TechsIcons Tech={item} IconClass='w-5' /></li>
                     ))}
                 </ul>
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Frameworks</h3>
                 <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
                     {frameworks.map((item) => (
-                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} IconClass='w-5' /></li>
+                      <li class='btn btn-circle btn-sm bg-grad-pink-brown'><TechsIcons Tech={item} IconClass='w-5' /></li>
                     ))}
                 </ul>
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Herramientas</h3>
                 <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
                     {tools.map((item) => (
-                      <li class='btn btn-circle btn-sm'><TechsIcons Tech={item} IconClass='w-5' /></li>
+                      <li class='btn btn-circle btn-sm bg-grad-pink-brown'><TechsIcons Tech={item} IconClass='w-5' /></li>
                     ))}
                 </ul>
             </div>
         </div>
-        <div class='flex justify-end max-w-md text-primary'>
-            <ol class='relative border-l border-primary'>
-                <li class='mb-10 ml-4 bg-neutral rounded-md p-2'>
+        <div class='flex justify-end max-w-md text-base-content'>
+            <ol class='relative border-l border-primary-focus'>
+                <li class='mb-10 ml-4 bg-neutral/40 rounded-md p-2 flex flex-col gap-1'>
                     <div class="absolute w-3 h-3 bg-primary rounded-full mt-1.5 -left-1.5 border border-primary"></div>
                     <time class='mb-1 text-sm font-normal leading-none'>Agosto 2022 → Actualidad</time>
                     <h2 class='text-lg font-black [font-stretch:ultra-expanded]'>↘ NUCBA</h2>
                     <h3 class='text-md font-semibold'>Fullstack Developer</h3>
-                    <p class='mb-4 text-primary/60 text-sm font-medium'>En el Bootcamp de Nucba, se aprenden las habilidades más importantes para la programación. Tanto Frontend como Backend.</p>
+                    <p class='mb-4 text-base-content/50 text-sm font-medium'>En el Bootcamp de Nucba, se aprenden las habilidades más importantes para la programación. Tanto Frontend como Backend.</p>
                 </li>
             </ol>
         </div>

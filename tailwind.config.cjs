@@ -41,35 +41,22 @@ module.exports = {
 	},
 	daisyui: {
 		themes: [
-			{
-				dark: {
-					primary: '#0C0A09', // Tailwind Stone
-					'primary-focus': '#18100C',
-					'primary-content': '#CFCBE6',
-					secondary: '#AAB2D1',
-					accent: '#CFCBE6',
-					neutral: '#272D3F',
-					'base-100': '#21232D',
-					info: '#D8B4FE',
-					success: '#86EFAC',
-					warning: '#FDE68A',
-					error: '#FCA5A5',
-					'base-content': '#CFCBE6',
-				},
-				light: {
-					primary: '#CFCBE6',
-					'primary-content': '#606887',
-					secondary: '#353C51',
-					accent: '#272D3F',
-					neutral: '#CFCBE6',
-					'base-100': '#E1DFF0',
-					info: '#22d3ee',
-					success: '#22c55e',
-					warning: '#eab308',
-					error: '#ef4444',
-					'base-content': '#272D3F',
-				},
-			},
+      {
+      coffee: {
+        "primary": "#BB7D7D",
+        "primary-focus": "#4F4243",
+        "secondary": "#263E3F",
+        "accent": "#10576D",
+        "neutral": "#120C12",
+        "base-100": "#20161F",
+        "base-focus": "#120C12",
+        "base-content": "#e0dcd5",
+        "info": "#8DCAC1",
+        "success": "#9DB787",
+        "warning": "#FFD25F",
+        "error": "#FC9581",
+      },
+      }
 		],
 	},
 	plugins: [

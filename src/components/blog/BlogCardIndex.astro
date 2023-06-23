@@ -17,7 +17,7 @@ const fullDate = publishDate.toLocaleDateString('es', {
 ---
 <li class="grid grid-cols-1 gap-2 sm:grid-cols-3 h-40 text-primary-content font-mona-sans my-3">
   <a
-    class="col-span-3 flex flex-col gap-6 bg-primary/60 text-primary-content backdrop-blur-sm ring-2 ring-primary/90 sm:gap-4 sm:p-5 sm:hover:bg-primary-focus/60 hover:ring-primary-focus rounded-lg relative overflow-hidden transition-all ease-in-out duration-500"
+    class="col-span-3 flex flex-col gap-6 bg-base-100/70 text-base-content backdrop-blur-sm ring-2 ring-base-100 sm:gap-4 sm:p-5 sm:hover:bg-neutral-focus/60 hover:ring-primary-focus rounded-lg relative overflow-hidden transition-all ease-in-out duration-500"
     href={url}
   >
     <time
@@ -28,7 +28,7 @@ const fullDate = publishDate.toLocaleDateString('es', {
     <h2 class="text-lg font-extrabold">
       {title}
     </h2>
-    <p class="leading-relaxed max-w-prose text-primary-content/60 font-medium">{description}</p>
+    <p class="leading-relaxed max-w-prose text-base-content/60 font-medium">{description}</p>
 		<BlogTag Tag={tags}/>
   </a>
 </li>
