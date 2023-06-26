@@ -2,9 +2,6 @@
 import Noise from '@components/Noise.astro'
 import Head from '@components/Head.astro'
 import Header from '@components/Header.astro'
-import Footer from '@components/Footer.astro'
-import Menu from '@components/Menu.astro'
-// import MenuButton from '@components/MenuButton.astro'
 
 interface Props {
 	title: string;
@@ -41,11 +38,8 @@ const {
 	<body class='bg-base'>
     <Noise />
     <div class='relative z-20'>
-		  <Menu />	
-		  <!-- <MenuButton /> -->
 		  <Header />
 		  <slot />
-		  <Footer />
     </div>
 	</body>
 </html>
