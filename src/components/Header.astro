@@ -1,13 +1,15 @@
 ---
 import Nav from '@components/Nav.astro'
+import MobileNav from './MobileNav.astro'
 ---
 
 <header class='flex py-10 w-full'>
-	<div class='flex items-center justify-between sm:w-[75%] md:w-[85%] lg:w-[90%] px-4'>
-    <Nav />
-      <!-- <a href='mailto:bdiez19@gmail.com' class='flex flex-col font-mona-sans [font-stretch:ultra-expanded] uppercase text-xs font-bold h-fit w-fit btn btn-outline btn-success'>
-        <span>Actualmente disponible</span>
-        <span>para contratar</span>
-      </a> -->
+	<div class='flex items-center justify-between w-full'>
+    <div class='hidden sm:flex'>
+      <Nav />
+    </div>
+    <div class='flex sm:hidden'>
+      <MobileNav />
+    </div>
 	</div>
 </header>
