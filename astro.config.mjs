@@ -12,7 +12,7 @@ export default defineConfig({
   integrations: [tailwind(), mdx(), sitemap(), react()],
   markdown: {
     shikiConfig: {
-      theme: 'dracula',
+      theme: 'rose-pine',
       // Agrega lenguajes de programación personalizados
       // Nota: Shiki tiene innumerables lenguajes de programación incorporados, ¡incluido .astro!
       // https://github.com/shikijs/shiki/blob/main/docs/languages.md
