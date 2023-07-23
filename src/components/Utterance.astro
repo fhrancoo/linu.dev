@@ -5,13 +5,12 @@
 <script>
 	const script = document.createElement('script')
 	const container = document.querySelector('.utterance-container')
-	const currentTheme = localStorage.getItem('theme')
 
 	Object.entries({
 		src: 'https://utteranc.es/client.js',
 		repo: 'linuxmobile/linudev-comments',
 		'issue-term': 'title',
-		theme: 'dark-blue',
+		theme: 'photon-dark',
 		crossorigin: 'anonymous'
 	}).forEach(([key, value]) => {
 		script.setAttribute(key, value)

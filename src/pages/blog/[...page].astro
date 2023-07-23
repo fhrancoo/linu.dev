@@ -1,0 +1,49 @@
+---
+import Layout from '@layout/Layout.astro'
+import BlogCard from '@components/blog/BlogCard.astro';
+import Pagination from '@components/blog/Pagination.astro';
+
+import { getCollection } from "astro:content";
+export async function getStaticPaths({ paginate }) {
+  const allPost = await getCollection("blog");
+  const formatedPosts = allPost.sort(
+    (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+  );
+  return paginate(formatedPosts, {
+    pageSize: 6,
+  });
+}
+
+const { page } = Astro.props;
+const pathname = new URL(Astro.request.url).pathname.split("/");
+const firstPath = pathname[1];
+
+const title = "midudev 👨‍💻 | Artículos";
+const description = "Artículos de midudev";
+---
+<Layout {title} {description}>
+  {
+    page.data.map(async (post) => {
+      return (
+        <BlogCard
+          title={post.data.title}
+          description={post.data.description}
+          publishDate={post.data.publishDate}
+          url={`/blog/${post.slug}`}
+          tags={post.data.tags}
+        />
+      )
+    })
+  }
+  <div class="w-full flex items-center justify-start pt-20 px-36">
+    <Pagination
+      length={page.lastPage}
+      currentUrl={page.url.current}
+      currentPage={page.currentPage}
+      firstUrl={`/${firstPath}`}
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+      lastUrl={`/${firstPath}/${page.lastPage}`}
+    />
+  </div>
+</Layout>

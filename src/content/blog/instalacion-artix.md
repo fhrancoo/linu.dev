@@ -1,7 +1,7 @@
 ---
 title: "Instala Artix Linux con facilidad: guía completa en español."
 description: "Descubre cómo instalar Artix Linux en tu computadora con esta guía sencilla y clara en español. Incluye consejos para sacar el máximo provecho de tu sistema."
-tags: terminal 
+tags: linux
 publishDate: 2022-05-12
 ---
 

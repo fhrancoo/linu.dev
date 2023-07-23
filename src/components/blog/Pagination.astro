@@ -1,50 +1,80 @@
 ---
-import { getCollection } from "astro:content";
+const { length, currentUrl, currentPage, firstUrl, prevUrl, nextUrl, lastUrl } =
+  Astro.props;
+const paginationList = Array.from({ length: `${length}` }, (_, i) => i + 1);
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.publishDate.valueOf() - b.data.publishDate.valueOf()
-);
-
-const index = posts.findIndex((post) => {
-  return Astro.request.url.includes(post.slug);
-});
-
-const nextPost = posts[index + 1];
-const prevPost = posts[index - 1];
+const startIndex = Math.max(currentPage - 2, 0); // Índice de inicio de las páginas mostradas
+const endIndex = Math.min(startIndex + 4, paginationList.length - 1); // Índice de fin de las páginas mostradas
+const visiblePages = paginationList.slice(startIndex, endIndex + 1);
 ---
 
-<aside class='flex w-full mx-auto max-w-2xl h-96'>
-  <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+<nav
+  aria-label="Blog pages"
+  class="flex items-center gap-x-2 font-medium text-midu-50 text-sm"
+>
   {
-    prevPost && (
-      <a
-        href={`/blog/${prevPost.slug}/`}
-        class='group flex-1 flex flex-col grow text-sm p-4 rounded-lg border border-rose hover:border-rose/70 hover:border-opacity-100 transition-all hover:bg-love/5'
-      >
-        <p class='text-text mb-1'>
-          &larr; Previous post
-        </p>
-        <p class='font-semibold'>
-          {prevPost.data.title}
-        </p>
+    currentPage > 2 ? (
+      <a href={firstUrl} class="pr-3">
+        &lt;&lt; Primero
       </a>
+    ) : currentPage === 2 ? (
+      <span class="disabled invisible hidden">first</span>
+    ) : null
+  }
+
+  {
+    prevUrl ? (
+      <a href={prevUrl} class="px-2">
+        &lt; Anterior
+      </a>
+    ) : (
+      <span class="disabled">
+      </span>
     )
   }
+
   {
-    nextPost && (
+    visiblePages.map((num) => (
       <a
-        href={`/blog/${nextPost.slug}/`}
-        class="group flex-1 flex flex-col grow text-sm p-4 rounded-lg border border-rose hover:border-rose/70 hover:border-opacity-100 transition-all hover:bg-love/5"
+        href={`${firstUrl}${num == 1 ? "" : "/" + num}`}
+        class={` ${
+          currentPage == num ? "visited:text-midu-400" : ""
+        }`}
       >
-        <p class="mb-1">
-          Next post &rarr;
-        </p>
-        <p class="font-semibold">
-          {nextPost.data.title}
-        </p>
+        {num}
+      </a>
+    ))
+  }
+
+  {
+    !nextUrl ? (
+      <span class="disabled">
+      </span>
+    ) : (
+      <a href={nextUrl} class="px-2">
+        <i class="" />
+        Siguiente &gt;
       </a>
     )
   }
 
-  </div>
-</aside>
+  {
+    lastUrl == currentUrl ? (
+      <span class="disabled">
+      </span>
+    ) : (
+      <a href={lastUrl} class="">
+      </a>
+    )
+  }
+
+  {
+    currentPage < length - 2 ? (
+      <a href={lastUrl} class="pl-3">
+        Último  &gt;&gt;
+      </a>
+    ) : currentPage === length - 2 ? (
+      <span class="disabled invisible hidden">last</span>
+    ) : null
+  }
+</nav>

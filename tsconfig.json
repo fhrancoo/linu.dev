@@ -14,14 +14,20 @@
       "@components/*": [
         "components/*"
       ],
-      "@layouts/*": [
-        "layouts/*"
+      "@layout/*": [
+        "layout/*"
       ],
       "@services/*": [
         "services/*"
       ],
       "@api/*": [
         "api/*"
+      ],
+      "@layouts/*": [
+        "layouts/*"
+      ],
+      "@styles/*": [
+        "styles/*"
       ]
     },
     "jsx": "react-jsx",

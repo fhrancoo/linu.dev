@@ -1,6 +1,4 @@
 ---
-import NavIcon from './NavIcon.astro'
-
 const links = [
   {
     href: '/',
@@ -36,7 +34,6 @@ const links = [
       links.map((link) => (
         <li>
           <a href={link.href} class='ease-in-out duration-500 uppercase'>
-            <!-- <NavIcon IconName={link.icon} /> -->
             <span class='font-semibold font-mona-sans text-sm'>{link.text}</a>
           </a>
         </li>

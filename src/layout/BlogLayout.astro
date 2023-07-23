@@ -1,7 +1,7 @@
 ---
 import Layout from './Layout.astro'
 import '../style/global.css'
-import Pagination from '@components/blog/Pagination.astro'
+import PostPagination from '@components/blog/PostPagination.astro'
 import TwitterShare from '@components/blog/TwitterShare.astro'
 import Utterance from '@components/Utterance.astro'
 
@@ -85,7 +85,7 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString('es', {
 			<slot />
 			<Utterance />
 		</article>
-		<Pagination />
+		<PostPagination />
 	</main>
 </Layout>
 
