@@ -20,6 +20,23 @@ module.exports = {
 					'100%': { transform: 'translateX(0%)' },
 				},
 			},
+      colors: {
+         base: "#191724",
+         surface: "#1f1d2e",
+         overlay: "#26233a",
+         muted: "#6e6a86",
+         subtle: "#908caa",
+         text: "#e0def4",
+         love: "#eb6f92",
+         gold: "#f6c177",
+         rose: "#ebbcba",
+         pine: "#31748f",
+         foam: "#9ccfd8",
+         iris: "#c4a7e7",
+         highlightLow: "#21202e",
+         highlightMed: "#403d52",
+         highlightHigh: "#524f67",
+      },
 			backgroundImage: {
 				'grad-pink-brown': 'linear-gradient(166deg, #F085A7 0%, #4F4243 100%)',
 				'grad-red-gray': 'linear-gradient(116deg, #BB7D7D 0%, #2D4F56 100%)',
@@ -39,30 +56,9 @@ module.exports = {
 			},
 		},
 	},
-	daisyui: {
-		themes: [
-      {
-      coffee: {
-        "primary": "#BB7D7D",
-        "primary-focus": "#4F4243",
-        "secondary": "#263E3F",
-        "accent": "#10576D",
-        "neutral": "#120C12",
-        "base-100": "#20161F",
-        "base-focus": "#120C12",
-        "base-content": "#e0dcd5",
-        "info": "#8DCAC1",
-        "success": "#9DB787",
-        "warning": "#FFD25F",
-        "error": "#FC9581",
-      },
-      }
-		],
-	},
 	plugins: [
 		require('tailwind-scrollbar'),
 		require('@tailwindcss/typography'),
-		require('daisyui'),
 	],
 	variants: {
 		scrollbar: ['rounded'],

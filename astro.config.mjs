@@ -4,12 +4,10 @@ import mdx from '@astrojs/mdx';
 import fs from 'node:fs';
 import sitemap from '@astrojs/sitemap';
 
-import react from "@astrojs/react";
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://linu.dev',
-  integrations: [tailwind(), mdx(), sitemap(), react()],
+  integrations: [tailwind(), mdx(), sitemap()],
   markdown: {
     shikiConfig: {
       theme: 'rose-pine',
