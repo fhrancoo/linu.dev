@@ -1,7 +1,7 @@
 ---
 title: "Guía avanzada de prompts en Stable Diffusion"
 description: "Descubre cómo utilizar los prompts avanzados en Stable Diffusion para crear imágenes sorprendentes con esta guía completa y trucos útiles."
-tags: [openai]
+tags: best-practice
 publishDate: 2022-12-20
 ---
 

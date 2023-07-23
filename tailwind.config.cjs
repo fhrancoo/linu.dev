@@ -33,13 +33,18 @@ module.exports = {
          pine: "#31748f",
          foam: "#9ccfd8",
          iris: "#c4a7e7",
-         highlightLow: "#21202e",
-         highlightMed: "#403d52",
-         highlightHigh: "#524f67",
+         "astro-blue": "#3245ff",
+         "astro-purple": "#bc52ee",
+         "astro-purple-dark": "#3f224d",
+         "astro-pink": "#f041ff",
+         "astro-orange": "#ff7d54",
+         "astro-yellow": "#f8e42e",
       },
 			backgroundImage: {
-				'grad-pink-brown': 'linear-gradient(166deg, #F085A7 0%, #4F4243 100%)',
-				'grad-red-gray': 'linear-gradient(116deg, #BB7D7D 0%, #2D4F56 100%)',
+				'gradient-purple': 'linear-gradient(83deg, #3245ff 0%, #b845ed 100%)',
+				'gradient-green': 'linear-gradient(247deg, #4af2c8 0%, #2f4cb3 100%)',
+        'gradient-red': 'linear-gradient(66deg, #d83333 0%, #f041ff 100%)',
+        'gradient-orange': 'linear-gradient(266deg, #f8e42e 0%, #ff7d54 100%)',
 			},
 			boxShadow: {
 				xs:

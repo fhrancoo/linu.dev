@@ -1,7 +1,7 @@
 ---
 title: "Instalación de Node.js en Termux: Consejos y soluciones"
 description: "Aprende a configurar Node.js en la app de Android Termux y soluciona los problemas más comunes para instalar paquetes."
-tags: [nodedotjs]
+tags: node 
 publishDate: 2022-06-25
 ---
 

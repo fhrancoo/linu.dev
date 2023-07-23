@@ -1,7 +1,7 @@
 ---
 title: "Domina JavaScript con este Todolist"
 description: "Descubre cómo crear un Todolist con JavaScript y HTML. Una guía práctica con consejos útiles para principiantes."
-tags: [javascript]
+tags: javascript
 publishDate: 2022-10-19
 ---
 

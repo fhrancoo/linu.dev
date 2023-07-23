@@ -8,8 +8,8 @@ const posts = (await getCollection('blog')).sort(
 )
 ---
 
-<section class='w-full h-full flex flex-col items-center justify-center my-8 px-6 xl:px-48 mb-28 mx-auto sm:max-w-2xl md:max-w-7xl'>
-  <h2 class='text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-mona-sans [font-stretch:ultra-expanded] font-bold w-full'>Últimas Publicaciones</h2>
+<section class='w-full h-full flex flex-col items-center justify-center my-8 gap-y-2'>
+  <h2 class='text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-mona-sans [font-stretch:ultra-expanded] font-bold w-full'>Últimas Publicaciones</h2>
   <div class='divider'></div>
   {
   posts.slice(0, 3).map(post => (
@@ -23,6 +23,6 @@ const posts = (await getCollection('blog')).sort(
   ))
   }
   <div class='w-full flex items-end justify-end mt-8'>
-    <a href='/blog/' class='btn btn-md btn-primary duration-700'>todas las publicaciones</a>
+    <a href='/blog/' class='uppercase px-3 py-2 bg-surface/70 rounded-md duration-700'>todas las publicaciones</a>
   </div>
 </section>

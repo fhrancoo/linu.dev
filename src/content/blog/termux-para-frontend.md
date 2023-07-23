@@ -1,7 +1,7 @@
 ---
 title: "Guía para programar en Android con Termux"
 description: "Aprende cómo configurar Termux en Android para programar como un profesional. Descubre configuraciones sorprendentes para desarrolladores en esta guía completa."
-tags: [android]
+tags: terminal 
 publishDate: 2022-06-24
 ---
 

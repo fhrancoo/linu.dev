@@ -1,6 +1,6 @@
 ---
 title: "De principiante a fullstack en Nucba: mi experiencia"
-tags: [javascript]
+tags: javascript
 publishDate: 2022-10-13
 description: "Descubre cómo pasé de principiante a programador fullstack en el bootcamp de programación Nucba con mi experiencia personal en la enseñanza de JavaScript."
 ---

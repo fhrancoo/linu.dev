@@ -5,7 +5,7 @@ interface Props {
   description: string;
   publishDate: Date;
   url: string;
-	tags: string[];
+	tags: string;
 }
 
 const { title, description, publishDate, url, tags } = Astro.props;
@@ -15,25 +15,22 @@ const fullDate = publishDate.toLocaleDateString('es', {
   day: 'numeric',
 })
 ---
-<li class="grid grid-cols-1 gap-2 sm:grid-cols-4 h-40 text-base-content font-mona-sans">
+<li class="grid grid-cols-1 gap-2 sm:grid-cols-4 h-40 font-mona-sans">
   <time
     datetime={publishDate.toISOString()}
-    class="hidden sm:block text-sm tracking-wide mt-6 sm:ml-6 text-base-content"
+    class="text-sm tracking-wide mt-6 sm:ml-6 text-text/50 font-medium"
     >{fullDate}
   </time>
   <a
-    class="col-span-3 flex flex-col gap-2 bg-base-100/70 text-base-content backdrop-blur-sm ring-2 ring-base-100 p-2 sm:gap-4 sm:p-5 sm:hover:bg-neutral-focus/50 hover:ring-primary-focus rounded-lg relative overflow-hidden transition-all ease-in-out duration-500"
+    class="col-span-3 flex gap-2 bg-iris/5 text-text backdrop-blur-sm ring-2 ring-astro-pink/20 p-2 sm:gap-4 sm:p-5 sm:hover:bg-astro-pink/10 hover:ring-astro-pink rounded-lg relative overflow-hidden transition-all ease-in-out duration-500"
     href={url}
   >
-    <time
-      datetime={publishDate.toISOString()}
-      class="block sm:hidden text-sm tracking-wide text-base-content"
-      >{fullDate}
-    </time>
-    <h2 class="text-lg font-extrabold">
-      {title}
-    </h2>
-    <p class="leading-relaxed max-w-prose text-base-content/60 font-medium line-clamp-2 sm:line-clamp-3">{description}</p>
 		<BlogTag Tag={tags}/>
+    <div class="flex flex-col items-start justify-center">
+      <h2 class="text-lg font-extrabold">
+        {title}
+      </h2>
+      <p class="leading-relaxed max-w-prose text-iris/60 font-medium text-sm line-clamp-2 sm:line-clamp-3">{description}</p>
+    </div>
   </a>
 </li>

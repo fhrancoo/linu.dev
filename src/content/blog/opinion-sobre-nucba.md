@@ -1,7 +1,7 @@
 ---
 title: "Mi experiencia en NUCBA: una opinión personal (Parte 1)"
 description: "Descubre mi honesta opinión sobre el bootcamp de programación NUCBA en la primera parte de esta serie de dos. ¡No te pierdas mis pensamientos!"
-tags: [devdotto]
+tags: frontend 
 publishDate: 2022-09-04
 ---
 

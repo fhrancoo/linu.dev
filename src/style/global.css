@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .alert {
+    @apply flex items-center justify-start gap-x-4 rounded-md px-6 py-1 my-4;
+  }
+  .alert-warning {
+    @apply bg-love/70 text-surface;
+  };
+
+  .alert-error {
+    @apply bg-astro-orange/70 text-white;
+  };
+
+  .alert-success {
+    @apply bg-green-500 text-white;
+  };
+
+  .alert-info {
+    @apply bg-foam text-white;
+  };
+}

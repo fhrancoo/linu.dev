@@ -7,7 +7,7 @@ import Error from './svgIcons/Error.astro';
 const { AlertType } = Astro.props
 
 ---
-<div class={`alert alert-${AlertType} shadow-lg py-0`}>
+<div class={`alert alert-${AlertType} shadow-lg`}>
     {AlertType === 'success' && <Success />}
     {AlertType === 'info' && <Info />}
     {AlertType === 'warning' && <Warning />}

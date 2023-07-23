@@ -1,5 +1,6 @@
 ---
 import Layout from './Layout.astro'
+import '../style/global.css'
 import Pagination from '@components/blog/Pagination.astro'
 import TwitterShare from '@components/blog/TwitterShare.astro'
 import Utterance from '@components/Utterance.astro'
@@ -14,7 +15,7 @@ interface Props {
 	publishDate: Date;
 	url: string;
 	updatedDate?: Date;
-	tags: string[];
+	tags: string;
 }
 
 const {
@@ -47,21 +48,14 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString('es', {
 	ogImage={ogImage}
 	publishDate={updatedDate || publishDate}
 >
-	<div class='flex items-center justify-center w-full h-full px-6 md:px-4 mb-16 relative'>
+	<div class='flex items-center justify-center w-full h-full mb-16 relative'>
   <TwitterShare Url={Astro.url} Title={title} />
-  	<div class="text-sm breadcrumbs">
-    	<ul>
-      	<li><a href='/' class='underline underline-offset-' text-primary hover:text-accent transition-all ease-in-out duration-500'>Inicio</a></li>
-      	<li><a href='/blog' class='underline underline-offset-2 text-primary hover:text-accent transition-all ease-in-out duration-500'>Blog</a></li> 
-      	<li class='text-accent'>{title}</li>
-    	</ul>
-  	</div>
 	</div>
-	<div class='flex flex-col items-center justify-center px-10 lg:px-60 font-mona-sans'>
+	<div class='flex flex-col items-center justify-center font-mona-sans'>
 		<h1 class='title [font-stretch:ultra-expanded] font-black text-xl sm:text-2xl md:text-5xl lg:text-7xl'>{title}</h1>
   	<div class='flex items-center justify-between w-full'>
     	<div class='flex items-start justify-start gap-x-2 my-5 md:my-9 font-mona-sans'>
-	    	{tags && tags.map((tag) => <span class='badge badge-outline badge-lg'>{tag}</span>)}
+	    <span class=''>{tags}</span>
     	</div>
 	  	<div class='text-sm'>
 		  	{
@@ -84,10 +78,10 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString('es', {
 	  	</div>
   	</div>
 	</div>
-	<div class='divider px-10 lg:px-60'></div>
+	<div class='divider'></div>
 	<main class='flex flex-col items-center justify-center w-full font-mona-sans px-1'>
 		<article 
-			class='prose-sm md:prose-lg px-10 lg:px-60 prose-img:rounded-xl prose-a:text-warning max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline prose-headings:font-mona-sans prose-headings:[font-stretch:ultra-expanded] prose-h2:font-extrabold prose-h3:font-bold prose-p:font-mona-sans prose-a:font-bold prose-headings:text-info prose-headings:pt-6 prose-headings:underline prose-strong:text-accent prose-strong:font-extrabold mt-8'>
+			class='prose-sm md:prose-lg px-24 prose-img:rounded-xl prose-a:text-love max-w-none hover:prose-a:underline hover:prose-a:text-rose focus:prose-a:underline prose-a:no-underline prose-headings:font-mona-sans prose-headings:[font-stretch:ultra-expanded] prose-h2:font-extrabold prose-h3:font-bold prose-p:font-mona-sans prose-a:font-bold prose-headings:bg-gradient-red prose-headings:bg-clip-text prose-headings:text-transparent prose-headings:pt-6 prose-headings:underline prose-strong:text-gold prose-strong:font-extrabold mt-8 prose:transition-all prose:duration-300 prose:ease-in-out'>
 			<slot />
 			<Utterance />
 		</article>
