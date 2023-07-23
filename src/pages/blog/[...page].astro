@@ -1,6 +1,7 @@
 ---
 import Layout from '@layout/Layout.astro'
 import BlogCard from '@components/blog/BlogCard.astro';
+import Categories from '@components/blog/Categories.astro';
 import Pagination from '@components/blog/Pagination.astro';
 
 import { getCollection } from "astro:content";
@@ -22,8 +23,13 @@ const title = "midudev 👨‍💻 | Artículos";
 const description = "Artículos de midudev";
 ---
 <Layout {title} {description}>
+  <main class="grid grid-cols-4 items-start justify-between">
+    <section class="col-span-3">
+      <h2 class="font-bold text-4xl pb-10">Artículos Recientes</h2>
+      <ul class="flex flex-col items-start justify-center gap-y-4">
   {
-    page.data.map(async (post) => {
+    page.data.map(async(post) => {
+      const { remarkPluginFrontmatter } = await post.render()
       return (
         <BlogCard
           title={post.data.title}
@@ -31,11 +37,21 @@ const description = "Artículos de midudev";
           publishDate={post.data.publishDate}
           url={`/blog/${post.slug}`}
           tags={post.data.tags}
+          readTime={remarkPluginFrontmatter.minutesRead}
         />
       )
     })
   }
-  <div class="w-full flex items-center justify-start pt-20 px-36">
+      </ul>
+    </section>
+    <aside class="">
+      <h3 class="font-bold text-2xl pb-10">Categorías</h3>
+      <div class="flex flex-wrap gap-3">
+        <Categories />
+      </div>
+    </aside>
+  </main>
+  <div class="w-full flex items-center justify-start py-12">
     <Pagination
       length={page.lastPage}
       currentUrl={page.url.current}

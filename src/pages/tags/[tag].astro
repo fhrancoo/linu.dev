@@ -1,0 +1,65 @@
+---
+import Layout from '@layout/Layout.astro'
+import BlogCard from '@components/blog/BlogCard.astro'
+import Pagination from '@components/blog/Pagination.astro'
+import Categories from '@components/blog/Categories.astro'
+
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blog");
+
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.data.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+const title = "midudev 👨‍💻 | Categorías";
+const description = "Artículos de midudev";
+---
+
+<Layout {title} {description}>
+  <main class="grid grid-cols-4 items-start justify-between">
+    <section class="col-span-3">
+      <h2 class="font-bold text-4xl pb-10 capitalize">Artículos sobre {tag}</h2>
+      <ul class="flex flex-col items-start justify-center gap-y-2">
+        {
+          posts.map(async(post) => {
+            const { remarkPluginFrontmatter } = await post.render();
+            return (
+              <li>
+                <BlogCard
+                  title={post.data.title}
+                  description={post.data.description}
+                  publishDate={post.data.publishDate}
+                  tags={post.data.tags}
+                  url={`/blog/${post.slug}`}
+                  readTime={remarkPluginFrontmatter.minutesRead}
+                />
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
+    <aside class="">
+      <h3 class="font-bold text-2xl pb-10">Categorías</h3>
+      <div class="flex flex-wrap gap-3">
+        <Categories />
+      </div>
+    </aside>
+  </main>
+</Layout>

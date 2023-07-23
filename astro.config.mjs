@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import fs from 'node:fs';
 import sitemap from '@astrojs/sitemap';
+import { remarkReadingTime } from './src/services/readTime.js'
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +17,8 @@ export default defineConfig({
       // https://github.com/shikijs/shiki/blob/main/docs/languages.md
       langs: [],
       wrap: true
-    }
+    },
+    remarkPlugins: [remarkReadingTime]
   },
   vite: {
     ssr: {

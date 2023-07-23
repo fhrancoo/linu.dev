@@ -16,6 +16,7 @@ interface Props {
 	url: string;
 	updatedDate?: Date;
 	tags: string;
+  readTime: string;
 }
 
 const {
@@ -24,7 +25,8 @@ const {
 	publishDate,
 	url,
 	updatedDate,
-	tags
+	tags,
+  readTime,
 } = Astro.props
 
 const ogImage = {
@@ -78,10 +80,10 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString('es', {
 	  	</div>
   	</div>
 	</div>
-	<div class='divider'></div>
+	<div class='divide-x-2'></div>
 	<main class='flex flex-col items-center justify-center w-full font-mona-sans px-1'>
 		<article 
-			class='prose-sm md:prose-lg px-24 prose-img:rounded-xl prose-a:text-love max-w-none hover:prose-a:underline hover:prose-a:text-rose focus:prose-a:underline prose-a:no-underline prose-headings:font-mona-sans prose-headings:[font-stretch:ultra-expanded] prose-h2:font-extrabold prose-h3:font-bold prose-p:font-mona-sans prose-a:font-bold prose-headings:bg-gradient-red prose-headings:bg-clip-text prose-headings:text-transparent prose-headings:pt-6 prose-headings:underline prose-strong:text-gold prose-strong:font-extrabold mt-8 prose:transition-all prose:duration-300 prose:ease-in-out'>
+			class='grid grid-cols-4 prose-sm md:prose-lg prose-img:rounded-xl prose-a:text-love max-w-none hover:prose-a:underline hover:prose-a:text-rose focus:prose-a:underline prose-a:no-underline prose-headings:font-mona-sans prose-headings:[font-stretch:ultra-expanded] prose-h2:font-extrabold prose-h3:font-bold prose-p:font-mona-sans prose-a:font-bold prose-headings:bg-gradient-red prose-headings:bg-clip-text prose-headings:text-transparent prose-headings:pt-6 prose-headings:underline prose-strong:text-gold prose-strong:font-extrabold mt-8 prose:transition-all prose:duration-300 prose:ease-in-out'>
 			<slot />
 			<Utterance />
 		</article>

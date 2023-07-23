@@ -6,9 +6,10 @@ interface Props {
   publishDate: Date;
   url: string;
 	tags: string;
+  readTime: string;
 }
 
-const { title, description, publishDate, url, tags } = Astro.props;
+const { title, description, publishDate, url, tags, readTime } = Astro.props;
 const fullDate = publishDate.toLocaleDateString('es', {
   year: 'numeric',
   month: 'long',
@@ -33,5 +34,6 @@ const fullDate = publishDate.toLocaleDateString('es', {
       class="text-xs tracking-wide font-medium text-subtle/50 w-full flex justify-end">
       {fullDate}
     </time>
+    <time class="text-xs tracking-wide font-medium text-subtle/50 w-full flex justify-end">{readTime}</time>
   </a>
 </li>

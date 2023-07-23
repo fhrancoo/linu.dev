@@ -6,31 +6,35 @@ interface Props {
   publishDate: Date;
   url: string;
 	tags: string;
+  readTime: string;
 }
 
-const { title, description, publishDate, url, tags } = Astro.props;
+const { title, description, publishDate, url, tags, readTime } = Astro.props;
 const fullDate = publishDate.toLocaleDateString('es', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 })
 ---
-<li class="grid grid-cols-1 gap-2 sm:grid-cols-4 h-40 font-mona-sans">
-  <time
-    datetime={publishDate.toISOString()}
-    class="text-sm tracking-wide mt-6 sm:ml-6 text-text/50 font-medium"
-    >{fullDate}
-  </time>
+<li class="font-mona-sans">
   <a
-    class="col-span-3 flex gap-2 bg-iris/5 text-text backdrop-blur-sm ring-2 ring-astro-pink/20 p-2 sm:gap-4 sm:p-5 sm:hover:bg-astro-pink/10 hover:ring-astro-pink rounded-lg relative overflow-hidden transition-all ease-in-out duration-500"
+    class="flex items-center bg-iris/5 text-text backdrop-blur-sm ring-2 ring-astro-pink/20 p-2 sm:gap-4 sm:p-5 sm:hover:bg-astro-pink/10 hover:ring-astro-pink rounded-lg transition-all ease-in-out duration-500 h-52"
     href={url}
   >
 		<BlogTag Tag={tags}/>
-    <div class="flex flex-col items-start justify-center">
-      <h2 class="text-lg font-extrabold">
+    <div class="flex flex-col items-start justify-between">
+      <h2 class="text-lg font-extrabold max-w-md">
         {title}
       </h2>
-      <p class="leading-relaxed max-w-prose text-iris/60 font-medium text-sm line-clamp-2 sm:line-clamp-3">{description}</p>
+      <p class="leading-relaxed max-w-prose text-iris/90 font-medium text-sm line-clamp-2 sm:line-clamp-3">{description}</p>
+      <div class="flex items-center justify-between w-full pt-4">
+        <time
+          datetime={publishDate.toISOString()}
+          class="text-xs tracking-wide text-subtle/70 font-medium w-full">
+          {fullDate}
+        </time>
+        <time class="text-xs tracking-wide font-medium text-subtle/70 w-full flex justify-end">{readTime}</time>
+      </div>
     </div>
   </a>
 </li>

@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon'
 const { Url, Title } = Astro.props
 ---
 
-<div class='flex items-end justify-center fixed bottom-7'>
+<div class='flex items-end justify-center fixed bottom-7 z-50'>
   <a href=`https://twitter.com/share/?url=${Url}&text="${Title}" por @linuxmobile` target='_blank' rel='nofollow noopener'
   class='bg-white py-2 px-4 rounded-3xl flex items-center justify-center gap-2 transition-all ease-in-out duration-700 hover:bg-blue-200' style='box-shadow: rgba(100,110,140,.4)0 6px 21px 2px;'
   >
