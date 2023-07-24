@@ -5,6 +5,9 @@ tags: linux
 publishDate: 2022-05-12
 ---
 
+## Intro:
+
+
 Tips / Instalación / Artix
 
 👉 **Nota:** [ISO de Artix / dinit](https://iso.artixlinux.org/iso/artix-base-dinit-20220123-x86_64.iso)

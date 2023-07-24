@@ -5,6 +5,9 @@ tags: javascript
 publishDate: 2022-10-19
 ---
 
+## Intro:
+
+
 <i>Esta semana comenzamos a aplicar lo básico de __Javascript__ en el bootcamp de NUCBA. Estamos haciendo un ToDoList con HTML + CSS + JS.</i>
 
 ![Ejemplo](https://i.imgur.com/lba4Wfq.png){:.img-100}
