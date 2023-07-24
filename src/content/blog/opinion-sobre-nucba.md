@@ -137,7 +137,7 @@ Ahí, pasa lo mismo que con los __Challenges__. Ves trabajos de otras personas y
 
 
 
-# El aprendizaje es Nucbantástico.
+## El aprendizaje es Nucbantástico.
 
 ![](https://i.imgur.com/pxW1546.png){:.img-90}
 _Integrador de Diseño Web_
@@ -156,7 +156,7 @@ El contenido me parece __práctico, sencillo y sin vueltas__. Si bien es un poco
 
 
 
-# Mi opinión personal
+## Mi opinión personal
 
 <i>Bueno, sinceramente, mi opinión es positiva. Me encantó la comunidad de discord, me fascina la forma que tienen de enseñar los tutores, la cercanía que tenés con la comunidad es algo bastante único. Los contenidos, las meets con gente pro, todo me parece fabuloso.</i>
 
@@ -171,6 +171,6 @@ Y por último, lo que me invitó a anotarme en __nucba__ son los comentarios pos
 ![](https://i.imgur.com/fnnL2sW.png){:.img-80}
 
 
-# Conclusión:
+## Conclusión:
 
 #### __Si estás planeando estudiar programación, UX/UI, diseño gráfico o algo más, anotate en NUCBA. Es un lugar óptimo y con excelentes herramientas. Vas a encontrar una comunidad excelente, que te apoya y te alienta todos los días. Es una opción económica que no afecta, tanto, a tu bolsillo. Nadie te roba, nadie te presiona. Acá aprendes y disfrutas al mismo tiempo.__
