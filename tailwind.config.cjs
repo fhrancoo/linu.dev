@@ -65,7 +65,7 @@ module.exports = {
 		require('tailwind-scrollbar'),
 		require('@tailwindcss/typography'),
 	],
-	variants: {
-		scrollbar: ['rounded'],
-	},
+	// variants: {
+	// 	scrollbar: ['rounded'],
+	// },
 }
