@@ -15,11 +15,11 @@ const links = [
     text: 'About',
     icon: 'user-circle-bold'
   },
-  {
-    href: '#contact',
-    text: 'Contact',
-    icon: 'programming-bold'
-  },
+  // {
+  //   href: '#contact',
+  //   text: 'Contact',
+  //   icon: 'programming-bold'
+  // },
   {
     href: '#',
     text: 'More',
@@ -29,7 +29,7 @@ const links = [
 
 ---
 <nav class='flex items-center justify-center w-full fixed left-0 top-6 z-20'>
-  <ul class='flex justify-center items-center bg-surface/70 rounded-full backdrop-blur-md ring-1 ring-surface px-4 py-2 gap-x-8'>
+  <ul class='flex justify-center items-center bg-surface/70 rounded-full backdrop-blur-md ring-2 ring-iris/10 px-4 py-1 gap-x-4 shadow-iris/10 shadow-xl'>
     {
       links.map((link) => (
         <li class='bg-transparent hover:bg-muted/20 px-2 py-1 rounded-md transition-all ease-in-out duration-500'>

@@ -17,7 +17,7 @@ const socialLinks = [
 ]
 ---
 {socialLinks.map((item) => (
-  <a href={item.url} target='_blank' rel='noopener noreferrer' class='bg-rosepine-iris p-2 rounded-full'>
-    <TechsIcons Tech={item.name} IconClass='w-6 text-surface' />
+  <a href={item.url} target='_blank' rel='noopener noreferrer' class='bg-transparent p-2 rounded-full'>
+    <TechsIcons Tech={item.name} IconClass='w-6 text-text hover:scale-110 transition-all duration-300 ease-in-out' />
   </a>
 ))}
