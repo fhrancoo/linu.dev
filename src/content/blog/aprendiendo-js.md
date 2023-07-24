@@ -5,8 +5,6 @@ publishDate: 2022-10-13
 description: "Descubre cómo pasé de principiante a programador fullstack en el bootcamp de programación Nucba con mi experiencia personal en la enseñanza de JavaScript."
 ---
 
-## Intro:
-
 Tips / Consejos / Javascript
 
 👉 Nota: [Documentación Javascript](https://es.javascript.info/)

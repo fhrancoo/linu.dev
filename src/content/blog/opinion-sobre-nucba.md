@@ -5,9 +5,6 @@ tags: frontend
 publishDate: 2022-09-04
 ---
 
-## Intro:
-
-
 👉 Nota: Web de [NUCBA](https://nucba.com.ar/).
 
 ::: warning
@@ -21,7 +18,7 @@ Antes de comenzar el post, me gustaría aclarar que no estoy siendo "sponsoreado
 :::
 
 
-# Como dí con NUCBA.
+## Como dí con NUCBA.
 
 Resulta que en el transcurso de terminar la secundaria, intenté encontrar una carrera a __distancia__ que <i>"sea para mi"</i>. Sí, con 27 años estoy terminando la secundaria. 
 Por lo tanto, busqué universidades de mi país que dieran algo que valiera la pena. La mayoría de las universidades ofrecen __Tecnicaturas__ o __Licenciaturas__, que siendo sincero, no cumplen ni con el 40% de lo que a mi me interesaba estudiar. 
@@ -52,7 +49,7 @@ Hasta este punto estaba que me cagaba del susto, porque los precios de __Coderho
 
 **Así que fui a revisar la página, ¡una vez más!.**
 
-# Como te ven te tratan (?). La web de NUCBA.
+## Como te ven te tratan (?). La web de NUCBA.
 
 👉 Nota: [NUCBA](https://nucba.com.ar/).
 

@@ -5,9 +5,6 @@ tags: terminal
 publishDate: 2022-06-24
 ---
 
-## Intro:
-
-
 Tips / Instalación / Termux
 
 👉 Nota: Para descargar, utilizaremos la versión de F-Droid: [Termux](https://f-droid.org/en/packages/com.termux/)

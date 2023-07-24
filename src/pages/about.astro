@@ -7,12 +7,10 @@ const frontend = [ 'html5', 'css3', 'javascript', 'react', 'sass' ]
 const frameworks = [ 'tailwindcss', 'astro', 'bootstrap' ]
 const tools = [ 'visualstudiocode', 'git', 'gnubash', 'linux' ]
 
-const bornDate = new Date('1994-09-08')
-const ageDiff = Date.now() - bornDate.getTime()
-const ageDate = new Date(ageDiff)
-const actualAge = Math.abs(ageDate.getUTCFullYear() - 1970)
+const title = "LinuDev 🐧| Sobre Mi";
+const description = "Artículos de midudev";
 ---
-<Layout>
+<Layout {title} {description}>
     <section class='w-full h-full grid grid-cols-2 gap-y-12 items-start justify-between my-16 font-mona-sans'>
         <div class=''>
             <h1 class='text-7xl font-bold [font-stretch:ultra-expanded] max-w-lg mb-16'>Mi nombre es <span class=''>Braian</span></h1>
