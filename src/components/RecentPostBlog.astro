@@ -11,17 +11,22 @@ const posts = (await getCollection('blog')).sort(
 <section class='w-full h-full flex flex-col items-center justify-center my-8 gap-y-2'>
   <h2 class='text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-mona-sans [font-stretch:ultra-expanded] font-bold w-full'>Últimas Publicaciones</h2>
   <div class='divider'></div>
-  {
-  posts.slice(0, 3).map(post => (
-		<BlogCardIndex
-		  title={post.data.title}
-			publishDate={post.data.publishDate}
-			description={post.data.description}
-			url={`/blog/${post.slug}`}
-			tags={post.data.tags}
-		/>
-  ))
-  }
+  <ul class="w-full items-center justify-center gap-y-2 max-w-2xl">
+    {
+    posts.slice(0, 3).map(async (post) => {
+      const { remarkPluginFrontmatter } = await post.render()
+      return (
+      <BlogCardIndex
+        title={post.data.title}
+        publishDate={post.data.publishDate}
+        description={post.data.description}
+        url={`/blog/${post.slug}`}
+        tags={post.data.tags}
+        readTime={remarkPluginFrontmatter.minutesRead}
+      />
+      )})
+    }
+  </ul>
   <div class='w-full flex items-end justify-end max-w-3xl mt-8'>
     <a href='/blog/' class='uppercase px-3 py-2 bg-surface/70 rounded-md duration-500 hover:bg-overlay'>ver más</a>
   </div>

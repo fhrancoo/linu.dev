@@ -27,21 +27,21 @@ const description = "Artículos de midudev";
     <section class="col-span-3">
       <h2 class="font-bold text-4xl pb-10">Artículos Recientes</h2>
       <ul class="flex flex-col items-start justify-center gap-y-4">
-  {
-    page.data.map(async(post) => {
-      const { remarkPluginFrontmatter } = await post.render()
-      return (
-        <BlogCard
-          title={post.data.title}
-          description={post.data.description}
-          publishDate={post.data.publishDate}
-          url={`/blog/${post.slug}`}
-          tags={post.data.tags}
-          readTime={remarkPluginFrontmatter.minutesRead}
-        />
-      )
-    })
-  }
+        {
+          page.data.map(async(post) => {
+            const { remarkPluginFrontmatter } = await post.render()
+            return (
+              <BlogCard
+                title={post.data.title}
+                description={post.data.description}
+                publishDate={post.data.publishDate}
+                url={`/blog/${post.slug}`}
+                tags={post.data.tags}
+                readTime={remarkPluginFrontmatter.minutesRead}
+              />
+            )
+          })
+        }
       </ul>
     </section>
     <aside class="">
