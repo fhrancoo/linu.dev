@@ -23,3 +23,10 @@
     @apply bg-foam text-white;
   };
 }
+
+@layer base {
+  ::selection {
+    @apply bg-astro-pink/70 text-white;
+  }
+}
+
