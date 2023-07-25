@@ -13,13 +13,13 @@ const nextPost = posts[index + 1];
 const prevPost = posts[index - 1];
 ---
 
-<aside class='flex w-full mx-auto max-w-2xl h-96'>
-  <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+<section class='flex w-full mx-auto pt-4'>
+  <div class="grid grid-cols-2 w-full gap-4 items-center justify-center max-w-4xl">
   {
     prevPost && (
       <a
         href={`/blog/${prevPost.slug}/`}
-        class='group flex-1 flex flex-col grow text-sm p-4 rounded-lg border border-rose hover:border-rose/70 hover:border-opacity-100 transition-all hover:bg-love/5'
+        class='text-sm p-4 rounded-lg border border-rose hover:border-rose/70 hover:border-opacity-100 transition-all hover:bg-love/5'
       >
         <p class='text-text mb-1'>
           &larr; Previous post
@@ -34,7 +34,7 @@ const prevPost = posts[index - 1];
     nextPost && (
       <a
         href={`/blog/${nextPost.slug}/`}
-        class="group flex-1 flex flex-col grow text-sm p-4 rounded-lg border border-rose hover:border-rose/70 hover:border-opacity-100 transition-all hover:bg-love/5"
+        class="text-sm p-4 rounded-lg border border-rose hover:border-rose/70 hover:border-opacity-100 transition-all hover:bg-love/5"
       >
         <p class="mb-1">
           Next post &rarr;
@@ -47,4 +47,4 @@ const prevPost = posts[index - 1];
   }
 
   </div>
-</aside>
+</section>
