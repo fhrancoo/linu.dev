@@ -23,10 +23,10 @@ const title = "LinuDev 🐧| Blog";
 const description = "Artículos de midudev";
 ---
 <Layout {title} {description}>
-  <main class="grid grid-cols-4 items-start justify-between">
-    <section class="col-span-3">
+  <main class="px-4 grid grid-cols-4 items-start justify-between">
+    <section class="col-span-4 md:col-span-3">
       <h2 class="font-bold text-4xl pb-10">Artículos Recientes</h2>
-      <ul class="flex flex-col items-start justify-center gap-y-4">
+      <ul class="flex flex-col items-center md:items-start justify-center gap-y-4">
         {
           page.data.map(async(post) => {
             const { remarkPluginFrontmatter } = await post.render()
@@ -44,14 +44,14 @@ const description = "Artículos de midudev";
         }
       </ul>
     </section>
-    <aside class="">
+    <aside class="hidden md:block ps-4 lg:ps-0">
       <h3 class="font-bold text-2xl pb-10">Categorías</h3>
       <div class="flex flex-wrap gap-3">
         <Categories />
       </div>
     </aside>
   </main>
-  <div class="w-full flex items-center justify-start py-12">
+  <div class="w-full flex items-center justify-center md:justify-start py-12">
     <Pagination
       length={page.lastPage}
       currentUrl={page.url.current}

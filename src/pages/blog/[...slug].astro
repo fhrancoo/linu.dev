@@ -28,10 +28,10 @@ const { Content, headings, remarkPluginFrontmatter } = await post.render()
 	tags={frontmatter.tags}
   readTime={remarkPluginFrontmatter.minutesRead}
 >
-  <div class="col-span-3">
+  <div class="px-4 col-span-4 lg:px-0 lg:col-span-3">
 	  <Content />
   </div>
-  <div class="relative">
+  <div class="hidden lg:block relative">
     {headings && headings.length > 0 && <TableOfContents {headings} />}
   </div>
 </BlogLayout>
