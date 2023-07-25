@@ -1,0 +1,38 @@
+---
+import BlogTag from './BlogTag.astro'
+interface Props {
+  title: string;
+  description: string;
+  publishDate: Date;
+	tags: string;
+  readTime: string;
+}
+
+const { title, description, publishDate, tags, readTime } = Astro.props;
+const fullDate = publishDate.toLocaleDateString('es', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+})
+---
+<li class="text-text font-mona-sans my-3 w-full px-2 xl:px-0">
+  <div
+    class="px-4 py-2 flex items-center justify-start gap-4 bg-iris/5 text-text backdrop-blur-sm sm:p-5 rounded-lg transition-all ease-in-out duration-500 max-w-3xl">
+    <BlogTag Tag={tags}/>
+    <div class="flex flex-col items-center justify-center w-full">
+      <div class="flex items-center justify-start w-full">
+        <h2 class="text-lg sm:text-xl md:text-3xl font-extrabold max-w-md md:max-w-lg">
+          {title}
+        </h2>
+      </div>
+      <div class="flex items-center justify-between w-full pt-4">
+        <time
+          datetime={publishDate.toISOString()}
+          class="text-xs tracking-wide font-medium text-subtle/70">
+          {fullDate}
+        </time>
+        <time class="text-xs tracking-wide font-medium text-subtle/60">{readTime}</time>
+      </div>
+    </div>
+  </div>
+</li>

@@ -3,17 +3,14 @@ import Layout from './Layout.astro'
 import PostPagination from '@components/blog/PostPagination.astro'
 import TwitterShare from '@components/blog/TwitterShare.astro'
 import Utterance from '@components/Utterance.astro'
+import ArticleTemplate from '@components/blog/ArticleTemplate.astro'
 
 interface Props {
 	title: string;
 	description: string;
-	image: {
-		src: string;
-		alt: string;
-	};
-	publishDate: Date;
+	publishDate: string;
 	url: string;
-	updatedDate?: Date;
+	// updatedDate?: Date;
 	tags: string;
   readTime: string;
 }
@@ -22,64 +19,27 @@ const {
 	title,
 	description,
 	publishDate,
-	url,
-	updatedDate,
+	// updatedDate,
 	tags,
   readTime,
 } = Astro.props
-
-const ogImage = {
-	src: `/image/${url}.png`,
-	alt: title,
-}
-
-const fullPubDate = publishDate.toLocaleDateString('es', {
-  dateStyle: 'full',
-});
-
-const fullUpdatedDate = updatedDate?.toLocaleDateString('es', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-})
 ---
 <Layout
 	title={title}
 	description={description}
-	ogImage={ogImage}
-	publishDate={updatedDate || publishDate}
+	publishDate={publishDate}
 >
 	<div class='flex items-center justify-center w-full h-full mb-16 relative'>
   <TwitterShare Url={Astro.url} Title={title} />
 	</div>
-	<div class='flex flex-col px-4 lg:px-0 items-center justify-center font-mona-sans'>
-		<h1 class='title [font-stretch:ultra-expanded] font-black text-xl sm:text-2xl md:text-5xl lg:text-7xl'>{title}</h1>
-  	<div class='flex items-center justify-between w-full'>
-    	<div class='flex items-start justify-start gap-x-2 my-5 md:my-9 font-mona-sans'>
-	    <span class=''>{tags}</span>
-    	</div>
-	  	<div class='text-sm'>
-		  	{
-			  	publishDate && (
-				  	<time datetime={publishDate.toISOString()} class='mb-2 text-neutral-content text-opacity-60'>
-					  	{fullPubDate}
-				  	</time>
-			  	)
-		  	}
-		  	{
-			  	updatedDate && (
-				  	<div class='mt-2'>
-					  	Última Actualización{' '}
-					  	<time>
-						  	{fullUpdatedDate}
-					  	</time>
-				  	</div>
-			  	)
-		 		}
-	  	</div>
-  	</div>
-	</div>
-	<div class='divide-x-2'></div>
+  <ul class="flex items-center justify-start w-full">
+    <ArticleTemplate
+      title: {title}
+      publishDate: {publishDate}
+      tags: {tags}
+      readTime: {readTime}
+    />
+  </ul>
 	<main class='flex flex-col items-center justify-center w-full font-mona-sans px-1'>
 		<article 
 			class='grid grid-cols-4 prose-sm md:prose-lg prose-img:rounded-xl prose-a:text-astro-yellow max-w-none hover:prose-a:underline hover:prose-a:text-rose focus:prose-a:underline prose-a:no-underline prose-headings:font-mona-sans prose-headings:[font-stretch:ultra-expanded] prose-h2:font-extrabold prose-h3:font-bold prose-p:font-mona-sans prose-a:font-bold prose-headings:bg-gradient-purple prose-headings:bg-clip-text prose-headings:text-transparent prose-headings:pt-6 prose-headings:underline prose-strong:text-astro-purple prose-strong:font-extrabold mt-8 prose:transition-all prose:duration-300 prose:ease-in-out'>
