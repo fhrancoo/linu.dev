@@ -11,39 +11,41 @@ const title = "LinuDev 🐧| Sobre Mi";
 const description = "Artículos de midudev";
 ---
 <Layout {title} {description}>
-    <section class='w-full h-full grid grid-cols-2 gap-y-12 items-start justify-between my-16 font-mona-sans'>
+    <section class='w-full h-full px-4 gap-y-12 gap-x-2 items-start justify-between my-16 font-mona-sans'>
         <div class=''>
-            <h1 class='text-7xl font-bold [font-stretch:ultra-expanded] max-w-lg mb-16'>Mi nombre es <span class=''>Braian</span></h1>
+            <h1 class='text-5xl md:text-7xl font-bold [font-stretch:ultra-expanded] max-w-lg mb-8 md:mb-16'>Mi nombre es <span class=''>Braian</span></h1>
             <div class='flex w-full gap-x-6'>
-                <div class='text-sm tracking-wide max-w-md gap-2 flex flex-col'>
-                    <p class=''>Soy un programador web de Argentina.</p>
-                    <p class=''>Me mueven las ganas de crear sitios y aplicaciones que, realmente, hagan una diferencia.</p>
-                    <p class=''>Mi mayor objetivo es crear experiencias únicas y memorables que logren que los usuarios se enamoren de mis creaciones.</p>
+                <div class='text-sm tracking-wide gap-2 flex'>
+										<div>
+											<img src='/profile.webp' alt='profile pic' class='w-96 rounded-lg' />
+										</div>
+										<div class="pt-2 ps-4 md:[&>p]:text-lg [text-wrap:balance]">
+											<p>Soy un programador web de Argentina.</p>
+											<p>Me mueven las ganas de crear sitios y aplicaciones que, realmente, hagan una diferencia.</p>
+											<p>Mi mayor objetivo es crear experiencias únicas y memorables que logren que los usuarios se enamoren de mis creaciones.</p>
+										</div>
                 </div>
             </div>
         </div>
-        <div class=''>
-            <figure><img src='/profile.webp' alt='profile pic' class='w-96 rounded-lg' /></figure>
-        </div>
     </section>
-    <section class='w-full h-full grid grid-cols-2 items-start justify-between my-20 font-mona-sans gap-y-12'>
+    <section class='px-4 w-full h-full grid grid-cols-2 items-start justify-between my-20 font-mona-sans gap-y-12'>
         <div class='flex flex-col gap-y-8'>
             <h2 class='uppercase tracking-widest font-light'>Tecnologías que domino</h2>
-            <div class='grid grid-cols-2 gap-y-6'>
+            <div class='grid grid-rows-auto sm:grid-cols-2 gap-y-4'>
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Frontend</h3>
-                <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
+                <ul class='flex flex-wrap justify-start sm:justify-end gap-1 w-3/5 sm:max-w-[9rem]'>
                     {frontend.map((item) => (
                       <li class='bg-gradient-purple p-2 rounded-full'><TechsIcons Tech={item} IconClass='w-5' /></li>
                     ))}
                 </ul>
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Frameworks</h3>
-                <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
+                <ul class='flex flex-wrap justify-start sm:justify-end gap-1 w-3/5 sm:max-w-[9rem]'>
                     {frameworks.map((item) => (
                       <li class='bg-gradient-purple p-2 rounded-full'><TechsIcons Tech={item} IconClass='w-5' /></li>
                     ))}
                 </ul>
                 <h3 class='col-span-1 uppercase font-semibold [font-stretch:ultra-expanded]'>Herramientas</h3>
-                <ul class='flex flex-wrap justify-end gap-1 max-w-[9rem]'>
+                <ul class='flex flex-wrap justify-start sm:justify-end gap-1 w-3/5 sm:max-w-[9rem]'>
                     {tools.map((item) => (
                       <li class='bg-gradient-purple p-2 rounded-full'><TechsIcons Tech={item} IconClass='w-5' /></li>
                     ))}
