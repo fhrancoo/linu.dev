@@ -152,7 +152,7 @@ A día de hoy (15/09/2022), los tutores me parecen __más que excelentes__. Pers
 El contenido me parece __práctico, sencillo y sin vueltas__. Si bien es un poco rápido el aprendizaje, no me parece que sea poco ni que los temas se vean muy por arriba. Al menos, <i>por ahora</i>, estoy aprendiendo todo muy bien. Los profesores enseñan muy bien, ¡tiene buena forma de enseñar el contenido!
 
 
-<iframe width="100%" height="60%" border-radius="25px" src="https://www.youtube.com/embed/tRpONd-ikKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" border-radius="25px" src="https://www.youtube.com/embed/tRpONd-ikKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="aspect-video"></iframe>
 
 
 
