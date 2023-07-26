@@ -7,8 +7,6 @@ publishDate: 2022-08-16
 ---
 
 
-{% assign img-url = '/img/post/others' %}
-
 👉 Nota: [SSH](/ssh/).
 👉 Nota: [Git](/git/).
 
