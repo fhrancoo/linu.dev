@@ -9,6 +9,9 @@ import { remarkReadingTime } from './src/services/readTime.js'
 export default defineConfig({
   site: 'https://linu.dev',
   integrations: [tailwind(), mdx(), sitemap()],
+  experimental: {
+   assets: true
+  },
   markdown: {
     shikiConfig: {
       theme: 'rose-pine',
