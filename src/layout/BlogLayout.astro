@@ -3,16 +3,19 @@ import Layout from './Layout.astro'
 import PostPagination from '@components/blog/PostPagination.astro'
 import TwitterShare from '@components/blog/TwitterShare.astro'
 import Utterance from '@components/Utterance.astro'
-import ArticleTemplate from '@components/blog/ArticleTemplate.astro'
 import BlogCard from '@components/blog/BlogCard.astro'
 
 interface Props {
 	title: string;
 	description: string;
 	publishDate: string;
-	url: string;
 	tags: string;
   readTime: string;
+  url: string;
+  image: {
+    src: string;
+    alt: string;
+  }
 }
 
 const {
@@ -21,12 +24,20 @@ const {
 	publishDate,
 	tags,
   readTime,
+  url,
+  image
 } = Astro.props
+
+const ogImage = {
+	src: `/image/${url}.png`,
+	alt: title,
+}
 ---
 <Layout
 	title={title}
 	description={description}
 	publishDate={publishDate}
+  image={ogImage}
 >
 	<div class='flex items-center justify-center w-full h-full mb-16 relative'>
   <TwitterShare Url={Astro.url} Title={title} />
