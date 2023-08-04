@@ -10,7 +10,8 @@ export default defineConfig({
   site: 'https://linu.dev',
   integrations: [tailwind(), mdx(), sitemap()],
   experimental: {
-   assets: true
+   assets: true,
+   viewTransitions: true
   },
   markdown: {
     shikiConfig: {

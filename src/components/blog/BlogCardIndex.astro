@@ -16,25 +16,24 @@ const fullDate = publishDate.toLocaleDateString('es', {
   day: 'numeric',
 })
 ---
-<li class="text-text font-mona-sans my-3">
+<li class="font-mona-sans">
   <a
-    class="px-4 py-2 flex items-center justify-center gap-4 bg-iris/5 text-text backdrop-blur-sm ring-2 ring-base sm:p-5 sm:hover:bg-astro-blue/10 hover:ring-astro-blue rounded-lg transition-all ease-in-out duration-500"
-    href={url}>
-    <BlogTag Tag={tags}/>
-    <div class="flex flex-col items-center justify-center">
-      <div class="">
-        <h2 class="text-lg font-extrabold max-w-md">
-          {title}
-        </h2>
-        <p class="leading-relaxed max-w-prose text-muted/80 font-medium">{description}</p>
-      </div>
+    class="flex items-center bg-iris/5 text-text backdrop-blur-sm ring-2 ring-astro-pink/20 p-2 sm:gap-4 sm:p-5 sm:hover:bg-astro-pink/10 hover:ring-astro-pink rounded-lg transition-all ease-in-out duration-500 h-52"
+    href={url}
+  >
+		<BlogTag Tag={tags}/>
+    <div class="flex flex-col items-start justify-between">
+      <h2 class="text-lg font-extrabold max-w-md">
+        {title}
+      </h2>
+      <p class="leading-relaxed max-w-prose text-iris/90 font-medium text-sm line-clamp-2 sm:line-clamp-3">{description}</p>
       <div class="flex items-center justify-between w-full pt-4">
         <time
           datetime={publishDate.toISOString()}
-          class="text-xs tracking-wide font-medium text-subtle/50">
+          class="text-xs tracking-wide text-subtle/70 font-medium w-full">
           {fullDate}
         </time>
-        <time class="text-xs tracking-wide font-medium text-subtle/50">{readTime}</time>
+        <time class="text-xs tracking-wide font-medium text-subtle/70 w-full flex justify-end">{readTime}</time>
       </div>
     </div>
   </a>

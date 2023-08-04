@@ -26,7 +26,7 @@ const description = "Artículos de midudev";
   <main class="px-4 grid grid-cols-4 items-start justify-between">
     <section class="col-span-4 md:col-span-3">
       <h2 class="font-bold text-4xl pb-10">Artículos Recientes</h2>
-      <ul class="flex flex-col items-center md:items-start justify-center gap-y-4">
+      <ul class="flex flex-col items-center md:items-start justify-center gap-y-4" transition:name="blog">
         {
           page.data.map(async(post) => {
             const { remarkPluginFrontmatter } = await post.render()

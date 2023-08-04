@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 interface Props {
 	author?: string;
 	twitter?: string;
@@ -37,16 +38,7 @@ const canonicalURL = new URL(Astro.url).href;
 ---
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EHKQRZNYPJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EHKQRZNYPJ');
-</script>
-	<link rel='sitemap' href='/sitemap-index.xml'>
+  <link rel='sitemap' href='/sitemap-index.xml'>
 	<meta charset='utf-8' />
 	<meta name='generator' content={Astro.generator} />
 	<meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
@@ -87,4 +79,6 @@ const canonicalURL = new URL(Astro.url).href;
 
 	<link rel='preload' href='/Mona-Sans.woff2' as='font' type='font/woff2' crossorigin />
 	<link rel='preload' href='/main.css' as='style' onload="this.onload=null;this.rel='stylesheet'" />
+
+  <ViewTransitions />
 </head>
