@@ -38,7 +38,7 @@ const tasksList = document.querySelector(".tasks-list");
 const deleteBtn = document.querySelector(".deleteAll-btn");
 ~~~
 
-🔅 Una vez creadas las variables, utilizamos __JSON.parse{% ref "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse" %}__ para tomar los elementos de la lista.
+🔅 Una vez creadas las variables, utilizamos __JSON.parse __ para tomar los elementos de la lista.
 
 ~~~ js
 // Del LocalStorage obtenemos las listas,
@@ -53,7 +53,7 @@ const saveLocalStorage = (tasksList) => {
 ~~~
 
 
-🔅 Creamos la función __'createTask'__ donde vamos a poder agregar las tareas con innerHTML. 
+🔅 Creamos la función __'createTask'__ donde vamos a poder agregar las tareas con innerHTML.
 
 ~~~ js
 // Creamos una función que recibe la tarea y la renderiza
@@ -63,7 +63,7 @@ const createTask = (task) =>
 }
 ~~~
 
-🔅 Creamos una función, utilizando __innerHTML{% ref "https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML" %}__, __map{% ref "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map" %}__, y __join{% ref "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/join" %}__ para renderizar la lista como HTML en el DOM.
+🔅 Creamos una función, utilizando __innerHTML __, __map __, y __join __ para renderizar la lista como HTML en el DOM.
 
 ~~~ js
 // La función renderTaskList crea los elementos en el html,
@@ -74,7 +74,7 @@ const renderTasksList = (todoList) => {
 };
 ~~~
 
-🔅 Creamos una función para que el botón para borrar las listas aparezca o desaparezca dependiendo de si hay contenido o no, utilizando __lenght{% ref "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/length" %}__.
+🔅 Creamos una función para que el botón para borrar las listas aparezca o desaparezca dependiendo de si hay contenido o no, utilizando __lenght __.
 
 ~~~ js
 // .length recorre taskList y si no hay nada
@@ -95,7 +95,7 @@ const hideDeleteAll = (tasksList) => {
 1. Con preventDefault, evitamos el comportamiento por default del submit.
 2. con __trim__, guardamos la constante en __taskName__ quitando los espacios al principio y al final.
 3. Con __length__, comprobamos si ingresamos una tarea vacía o si hay una tarea en el array con ese mismo nombre.
-4. Con el __spread operator{% ref "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax" %}__, asignamos a las tareas el mismo array de tareas pero sumando una tarea más. taskId + 1. 
+4. Con el __spread operator __, asignamos a las tareas el mismo array de tareas pero sumando una tarea más. taskId + 1.
 5. Con __input.value__, reseteamos el valor del input.
 6. Renderizamos las tareas.
 7. Las guardamos en el LocalStorage.
@@ -123,14 +123,14 @@ const addTask = (e) => {
 };
 ~~~
 
-🔅 Creamos una función que borra las tareas utilizando __filter{% ref "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" %}__.
+🔅 Creamos una función que borra las tareas utilizando __filter __.
 
 ~~~ js
 // si la lista (<li>) no contiene la clase delete-btn
 // no hace nada (return),
 // si no: filtra el ID por data-id= (del html)
 // pasamos a número el id del elemento (<li>).
-// el array "tasks" usamos filter para borrar 
+// el array "tasks" usamos filter para borrar
 // el que tenga un id distinto.
 const removeTask = (e) => {
   if (!e.target.classList.contains("delete-btn")) return;
